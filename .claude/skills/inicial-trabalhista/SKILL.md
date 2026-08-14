@@ -78,12 +78,17 @@ Ao ser acionado, siga estas fases. Não pule a fase de entrevista — é ela que
 separa uma inicial forte de um formulário.
 
 ### Fase 1 — Entrevista e levantamento de fatos
+Comece **identificando a pasta do cliente no Google Drive** (link ou ID) — é o
+espaço de trabalho daquele caso: dela você lê os documentos (TRCT, CTPS,
+holerites, cartões-ponto, extrato de FGTS, prints) e nela a peça final será
+arquivada ao término. Guarde a ID da pasta para a fase de entrega.
+
 Conduza a coleta usando `references/checklist-entrevista.md`. Faça as perguntas
 em blocos organizados (dados das partes, contrato de trabalho, jornada,
 rescisão, verbas em aberto, condições de trabalho). **Não despeje todas as
 perguntas de uma vez** — vá por blocos, confirme e avance. Se o usuário já
-trouxe um relato ou documentos (TRCT, CTPS, holerites, cartões-ponto), extraia
-o que puder deles e só pergunte o que faltar.
+trouxe um relato ou documentos, extraia o que puder deles e só pergunte o que
+faltar.
 
 ### Fase 2 — Diagnóstico e estratégia
 Antes de redigir, apresente ao usuário um **mapa de teses**: quais pedidos são
@@ -136,11 +141,21 @@ no chat. Procedimento:
    negrito, tabelas do Word; instala o python-docx sozinho se faltar).
 3. **Entregue o arquivo ao usuário** com a ferramenta de envio de arquivos
    (SendUserFile), nomeando-o pelo cliente (ex.: `FULANO DE TAL - RECLAMAÇÃO.docx`).
-4. No chat, deixe só um resumo curto + o bloco "Pontos de atenção antes do
+4. **Arquive o `.docx` na pasta do cliente no Google Drive** (a pasta
+   identificada na Fase 1). Use a ferramenta de upload do conector do Google
+   Drive (`mcp__Google_Drive__create_file`), enviando o `.docx` com o parent
+   igual à ID da pasta do cliente. Confirme ao usuário o nome do arquivo e o
+   link/pasta onde ficou salvo.
+5. No chat, deixe só um resumo curto + o bloco "Pontos de atenção antes do
    protocolo". O conteúdo integral vai no `.docx`.
 
-Se a conversão falhar por qualquer motivo, resolva antes de entregar — não
-substitua o `.docx` por texto colado no chat.
+Observações honestas:
+- Se o conector do Google Drive não estiver ativo na sessão (ou em execução
+  agendada/headless), **não invente** o arquivamento: entregue o `.docx` pelo
+  chat (SendUserFile) e avise que o upload ao Drive não pôde ser feito, pedindo
+  ao usuário para reativar o conector ou salvar manualmente.
+- Se a conversão para `.docx` falhar, resolva antes de entregar — nunca
+  substitua o `.docx` por texto colado no chat.
 
 ## Limites e responsabilidade
 
