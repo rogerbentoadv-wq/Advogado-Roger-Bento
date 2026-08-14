@@ -64,6 +64,7 @@ audiência) gera retrabalho e risco de perder compromisso. Por isso o padrão é
   - Nome completo do cliente
   - Área / assunto do processo
   - Nº do processo (quando houver)
+  - Telefone do cliente
 - **Google Meet:** se for telepresencial, criar o Meet.
 
 ### 3) AUDIÊNCIA / PERÍCIA 🔴 (cor Vermelha)
@@ -76,6 +77,7 @@ audiência) gera retrabalho e risco de perder compromisso. Por isso o padrão é
   - Nº do processo
   - Vara
   - Cidade
+  - Telefone do cliente
 - **Local (campo "location") obrigatório:** `Vara + Cidade`
   (ex.: `1ª Vara do Trabalho de Porto Alegre - RS`).
 
@@ -108,6 +110,7 @@ Telefone: [(DDD) 90000-0000]
 Cliente: [NOME COMPLETO]
 Área/Assunto: [ÁREA]
 Processo nº: [NÚMERO]
+Telefone: [(DDD) 90000-0000]
 ```
 
 **Audiência / Perícia**
@@ -117,6 +120,7 @@ Parte adversa: [NOME COMPLETO]
 Processo nº: [NÚMERO]
 Vara: [VARA]
 Cidade: [CIDADE]
+Telefone: [(DDD) 90000-0000]
 ```
 
 ## Fluxo de trabalho
@@ -148,7 +152,7 @@ Cidade: [CIDADE]
 - [ ] Título em MAIÚSCULAS no formato do tipo
 - [ ] Cor (`colorId`) correta
 - [ ] Todos os campos obrigatórios da descrição preenchidos
-- [ ] Telefone presente (cliente novo)
+- [ ] Telefone do cliente presente (cliente novo, atualização e audiência/perícia)
 - [ ] Local preenchido (audiência/perícia = Vara + Cidade)
 - [ ] Google Meet criado (se telepresencial)
 - [ ] Data, hora e duração confirmadas
