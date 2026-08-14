@@ -10,10 +10,13 @@ Confira números de súmula/OJ antes de citar (marque `[CONFERIR]` em dúvida).
 semanais; extra com adicional mínimo de 50%); arts. 58, 59 e 64 da CLT. Normas
 coletivas podem fixar adicional superior — verificar CCT/ACT aplicável.
 
-**Ônus da prova da jornada** — **Súmula 338 do TST**:
-- I: empresa com mais de 20 empregados é obrigada a registrar a jornada
-  (art. 74, §2º, da CLT); a não apresentação injustificada dos controles gera
-  **presunção relativa de veracidade** da jornada da inicial.
+**Ônus da prova da jornada** — **Súmula 338 do TST** (VERIFICADO — ver
+`jurisprudencia/sumulas-tst.md`):
+- I: é ônus do empregador que conta com **mais de 10 empregados** registrar a
+  jornada (art. 74, §2º, da CLT); a não apresentação injustificada dos controles
+  gera **presunção relativa de veracidade** da jornada da inicial. Atenção: a
+  Reforma (Lei 13.467/2017) alterou o art. 74, §2º, para **"20 trabalhadores"** —
+  há divergência sobre o número aplicável; `[CONFERIR]` a posição do TRT-4.
 - II: os cartões que registram horários uniformes ("ponto britânico") são
   **inválidos** como prova, invertendo o ônus.
 - III: presunção pode ser elidida por prova em contrário.

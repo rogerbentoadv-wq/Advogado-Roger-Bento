@@ -35,12 +35,21 @@ que você já antecipa que a reclamada vai apresentar.
    Numa inicial trabalhista, um fato inventado destrói a credibilidade da causa
    inteira e expõe o cliente à litigância de má-fé (art. 793-A a 793-C da CLT).
 
-2. **Nunca invente jurisprudência.** Só cite súmula, OJ, tese ou precedente que
-   você tenha certeza que existe e diga o que você afirma. Em caso de dúvida
-   sobre o número ou o teor, descreva a tese e marque com
-   `[CONFERIR: súmula/OJ]` para o advogado validar antes do protocolo. É
-   preferível uma peça com uma marcação de conferência a uma peça com uma
-   citação falsa.
+2. **Nunca invente jurisprudência — cite apenas do banco.** Súmula, OJ, súmula
+   vinculante, tese ou precedente **só entram na peça se constarem do diretório
+   `jurisprudencia/` com Status `VERIFICADO`**. Você NÃO cita de memória. Regras:
+   - Entrada `VERIFICADO` → pode citar (o advogado ainda confere no protocolo).
+   - Entrada `A CONFERIR` → cite **descritivamente** e marque `[CONFERIR: nº]`.
+   - Entrada `SUSPENSO/SUPERADO` → **não** cite como vigente; sirva-se dela como
+     alerta (ex.: Súmula 228 do TST, base de cálculo da insalubridade).
+   - Tese que **não está** no banco → não afirme número; descreva o fundamento
+     legal e marque `[CONFERIR]`. É sempre preferível uma lacuna honesta a uma
+     citação falsa. Uma citação inventada expõe o cliente e destrói a peça.
+
+   Consulte `jurisprudencia/README.md` para o protocolo. Antes de fundamentar um
+   tópico, abra o arquivo pertinente (`sumulas-tst.md`, `sumulas-trt4.md`,
+   `orientacoes-jurisprudenciais-sdi.md`, `sumulas-vinculantes-stf.md`,
+   `teses-repetitivas-irr.md`) e use o que estiver VERIFICADO.
 
 3. **Todo pedido é certo, determinado e com valor.** Pós-Reforma, o art. 840,
    §1º, da CLT exige pedido **certo, determinado e com indicação de valor**.

@@ -36,18 +36,46 @@ aprovação e só então redigir a peça completa.
 | `references/teses/insalubridade-periculosidade.md` | Adicionais, perícia, base de cálculo, EPI |
 | `references/teses/vinculo-e-rescisao-indireta.md` | Vínculo, terceirização, rescisão indireta, estabilidades |
 | `references/estilo-do-escritorio.md` | **A calibrar** com as peças-modelo do escritório |
+| `jurisprudencia/` | Banco de súmulas/OJs/teses com **procedência** (fonte + data + status) |
+
+## Banco de jurisprudência e a regra "nunca inventar"
+
+O diretório `jurisprudencia/` é a **única fonte autorizada** de súmulas, OJs,
+súmulas vinculantes e teses que o agente pode citar. A regra é inegociável:
+
+> Nada é citado numa peça se não estiver no banco com Status `VERIFICADO`. O que
+> não estiver verificado sai marcado como `[CONFERIR]` para o advogado validar.
+
+Isso é o que realmente impede a invenção de jurisprudência: o agente cita do
+banco (com fonte registrada), não de memória. Veja `jurisprudencia/README.md`.
+
+### Limites honestos deste ambiente
+- **Sites oficiais bloqueados:** o acesso direto a `tst.jus.br` / `trt4.jus.br`
+  está bloqueado pela política de rede. A verificação usa **busca na web**, que
+  retorna fontes secundárias (Jusbrasil, LexML, etc.) — boas para conferir, mas
+  que **não substituem o texto oficial**. Toda citação exige conferência final.
+- **"Atualização diária":** possível como monitoramento dos temas sensíveis, mas
+  súmulas/OJs mudam pouco — a maioria das passadas termina sem alteração.
+- **Não há acesso ao Google Drive `G:\`:** aquele caminho é local do computador
+  do escritório e não é alcançável deste servidor na nuvem (ver Próximos passos).
 
 ## Próximos passos
 
-1. **Enviar peças-modelo:** forneça 1 a 3 iniciais que você redigiu e considera
-   bem escritas. O agente extrai seu padrão de estrutura, vocabulário e teses e
-   preenche `references/estilo-do-escritorio.md`, passando a escrever no *seu*
-   jeito.
-2. **Ampliar as teses:** conforme surgirem casos, novos arquivos de tese podem
-   ser adicionados em `references/teses/` (ex.: equiparação salarial, dano moral,
-   acidente de trabalho, PLR, comissões).
-3. **Modelos de cálculo:** opcionalmente, incluir planilhas/roteiros de
-   liquidação padronizados.
+1. **Enviar as peças-modelo (bloqueio atual):** o caminho `G:\Meu Drive\...` não
+   é acessível daqui. Duas formas de resolver:
+   - **Anexar** 1 a 3 iniciais direto nesta conversa (PDF/DOCX), ou colocá-las no
+     próprio repositório numa pasta `modelos/`; ou
+   - **Conectar o conector de Google Drive** na sua conta claude.ai — aí passo a
+     ler a pasta `ESCRITORIO/PEÇAS FINALIZADAS DR ALLAN/PROTOCOLADAS` na nuvem.
+
+   Com as peças em mãos, extraio o padrão e preencho
+   `references/estilo-do-escritorio.md`.
+2. **Ligar (ou não) a atualização automática:** posso criar um agendamento diário
+   que dispara uma sessão para rodar a rotina de verificação da jurisprudência e
+   commitar as mudanças. Isso consome uso da sua conta e depende da rede; decida
+   se compensa a frequência diária ou algo mais espaçado.
+3. **Ampliar as teses e o banco:** conforme surgirem casos, acrescentar teses
+   (equiparação, dano moral, acidente, PLR, comissões) e verificar mais entradas.
 
 ## Aviso importante
 
