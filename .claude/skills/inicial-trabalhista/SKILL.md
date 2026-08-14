@@ -116,11 +116,31 @@ Entregue um bloco "**Pontos de atenção antes do protocolo**".
 
 ## Entregáveis
 
-- A petição inicial redigida (em Markdown, pronta para transporte a editor de
-  texto), com campos a preencher marcados como `[...]`.
-- A tabela de pedidos liquidados + valor da causa.
-- O bloco "Pontos de atenção antes do protocolo".
+- **A petição inicial em arquivo `.docx` EDITÁVEL — SEM EXCEÇÃO.** Este é o
+  entregável principal e obrigatório. Ver "Formato de entrega" abaixo.
+- A tabela de pedidos liquidados + valor da causa (dentro da peça).
+- O bloco "Pontos de atenção antes do protocolo" (na conversa).
 - A lista de documentos a instruir a inicial.
+
+## Formato de entrega (obrigatório)
+
+Toda peça é entregue como **arquivo `.docx` editável**, nunca apenas como texto
+no chat. Procedimento:
+
+1. Escreva a peça completa em Markdown num arquivo (ex.: no diretório de
+   scratchpad da sessão): títulos de tópico em CAIXA ALTA, `**negrito**` onde
+   necessário, e o rol/valores de pedidos como **tabela Markdown** (`| ... |`).
+2. Converta para `.docx` rodando:
+   `python3 scripts/gerar_docx.py <peca>.md <peca>.docx`
+   (o script aplica Times New Roman 12, justificado, espaçamento 1,5, títulos em
+   negrito, tabelas do Word; instala o python-docx sozinho se faltar).
+3. **Entregue o arquivo ao usuário** com a ferramenta de envio de arquivos
+   (SendUserFile), nomeando-o pelo cliente (ex.: `FULANO DE TAL - RECLAMAÇÃO.docx`).
+4. No chat, deixe só um resumo curto + o bloco "Pontos de atenção antes do
+   protocolo". O conteúdo integral vai no `.docx`.
+
+Se a conversão falhar por qualquer motivo, resolva antes de entregar — não
+substitua o `.docx` por texto colado no chat.
 
 ## Limites e responsabilidade
 
