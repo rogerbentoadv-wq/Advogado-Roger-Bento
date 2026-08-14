@@ -86,6 +86,12 @@ audiência) gera retrabalho e risco de perder compromisso. Por isso o padrão é
   próprio para audiência/perícia. Se o usuário ainda não tiver o link, pergunte;
   se ele não tiver em mãos, registre `Link: (a informar)` e avise para completar
   depois.
+- **Quando o juízo FACULTA a videoconferência** (audiência designada como
+  presencial, mas o despacho permite participação por videoconferência):
+  registre a modalidade como **Presencial**, inclua na descrição o aviso
+  **"Videoconferência facultada pelo juízo"** e **cole o link** fornecido no
+  despacho. Nesse caso **NÃO** crie o nosso Google Meet — o link é sempre o do
+  juízo.
 
 ### 4) PARTICULAR 🔵 (cor Azul)
 - **Cor Google:** `colorId = 7` (Peacock / Pavão)
@@ -127,8 +133,8 @@ Processo nº: [NÚMERO]
 Vara: [VARA]
 Cidade: [CIDADE]
 Telefone: [(DDD) 90000-0000]
-Modalidade: [Presencial | Telepresencial]
-Link da videoconferência: [COLAR LINK DO JUÍZO — só quando telepresencial]
+Modalidade: [Presencial | Telepresencial | Presencial — Videoconferência facultada pelo juízo]
+Link da videoconferência: [COLAR LINK DO JUÍZO — quando telepresencial OU quando o juízo facultar]
 ```
 
 ## Fluxo de trabalho
