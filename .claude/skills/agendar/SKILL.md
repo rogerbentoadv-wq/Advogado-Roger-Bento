@@ -78,8 +78,14 @@ audiência) gera retrabalho e risco de perder compromisso. Por isso o padrão é
   - Vara
   - Cidade
   - Telefone do cliente
+  - Modalidade: **Presencial** ou **Telepresencial**
 - **Local (campo "location") obrigatório:** `Vara + Cidade`
   (ex.: `1ª Vara do Trabalho de Porto Alegre - RS`).
+- **Se Telepresencial — link da videoconferência (obrigatório):** cole o link
+  fornecido pelo **juízo** (Zoom/Meet do tribunal). **Não** crie Google Meet
+  próprio para audiência/perícia. Se o usuário ainda não tiver o link, pergunte;
+  se ele não tiver em mãos, registre `Link: (a informar)` e avise para completar
+  depois.
 
 ### 4) PARTICULAR 🔵 (cor Azul)
 - **Cor Google:** `colorId = 7` (Peacock / Pavão)
@@ -121,6 +127,8 @@ Processo nº: [NÚMERO]
 Vara: [VARA]
 Cidade: [CIDADE]
 Telefone: [(DDD) 90000-0000]
+Modalidade: [Presencial | Telepresencial]
+Link da videoconferência: [COLAR LINK DO JUÍZO — só quando telepresencial]
 ```
 
 ## Fluxo de trabalho
@@ -139,7 +147,9 @@ Telefone: [(DDD) 90000-0000]
    - `colorId` = conforme o tipo
    - `description` = modelo preenchido
    - `location` = Local (obrigatório em audiência/perícia; endereço se presencial)
-   - `addGoogleMeetUrl = true` quando telepresencial
+   - `addGoogleMeetUrl = true` quando **cliente novo ou atualização** telepresencial
+   - Para **audiência/perícia telepresencial**: NÃO use `addGoogleMeetUrl`;
+     cole o link do juízo na descrição (campo "Link da videoconferência")
    - `timeZone = "America/Sao_Paulo"`
    - Lembretes sugeridos: audiência/perícia → aviso **1 dia antes** e **1h antes**;
      demais → **1h antes** (confirme se o usuário quiser).
@@ -154,6 +164,7 @@ Telefone: [(DDD) 90000-0000]
 - [ ] Todos os campos obrigatórios da descrição preenchidos
 - [ ] Telefone do cliente presente (cliente novo, atualização e audiência/perícia)
 - [ ] Local preenchido (audiência/perícia = Vara + Cidade)
-- [ ] Google Meet criado (se telepresencial)
+- [ ] Google Meet criado (se cliente novo/atualização telepresencial)
+- [ ] Link da videoconferência do juízo colado (se audiência/perícia telepresencial)
 - [ ] Data, hora e duração confirmadas
 - [ ] Ficha confirmada pelo usuário
