@@ -24,15 +24,15 @@ Responsável: Claude (Agente de Verificação)
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | Súmula 85 | Compensação de jornada | I \- A compensação de jornada deve ser ajustada por acordo escrito, coletivo ou convenção. II \- Acordo individual para compensação é válido, salvo norma coletiva contrária. III \- Não-atendimento das exigências legais não implica repetição de pagamento. IV \- Prestação de horas extras habituais descaracteriza acordo de compensação. V \- Disposições não se aplicam a banco de horas. VI \- Inválido acordo de compensação em atividade insalubre sem inspeção prévia. | VERIFICADO | TST ([https://www.tst.jus.br/](https://www.tst.jus.br/)) | 2026-08-14 |
 | Súmula 366 | Cartão de ponto \- Horas extras | Minutos que antecedem e sucedem a jornada. Variações não excedentes a 5 minutos não são computadas como extras, observado limite de 10 minutos diários. Além desse limite, todo tempo residual é extra (troca de uniforme, lanche, higiene pessoal, etc.). | VERIFICADO | TST \- Res. 197/2015 ([https://www.tst.jus.br/](https://www.tst.jus.br/)) | 2026-08-14 |
-| Súmula 431 | Intervalo intrajornada | O direito do empregado ao intervalo intrajornada é irrenunciável. | A CONFERIR | \- | \- |
+| Súmula 431 | Divisor do salário-hora (44h) | Aplica-se o divisor 220 para o cálculo do salário-hora do empregado sujeito a 44 horas semanais de trabalho. | A CONFERIR (teor corrigido) | TST (conferir redação) | 2026-08-14 |
 
 ### Insalubridade e Periculosidade
 
 | Número | Tema | Teor | Status | Fonte | Verificado em |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| SV 4 (Súmula Vinculante) | Base de cálculo \- Insalubridade | O adicional de insalubridade será calculado sobre o salário mínimo (art. 192 CLT), não podendo ser substituído por decisão judicial sem lei ou negociação coletiva. | VERIFICADO | STF \- RE 565.714/SP ([https://www.stf.jus.br/](https://www.stf.jus.br/)) | 2026-08-14 |
-| Súmula 228 | Insalubridade \- BASE DE CÁLCULO | \[SUSPENSA \- Redação anterior tentava usar salário básico\]. Conforme decisão STF (Min. Lewandowski, RCL 6275/2024), base permanece salário mínimo da região (art. 192 CLT), salvo norma coletiva mais vantajosa. | SUSPENSO | STF \- RCL 6275/2024 ([https://www.stf.jus.br/](https://www.stf.jus.br/)) | 2026-08-14 |
-| Súmula 192 | Periculosidade | O adicional de periculosidade é devido quando há efetivo risco. | A CONFERIR | \- | \- |
+| SV 4 (Súmula Vinculante) | Salário mínimo como indexador \- vedação | Salvo nos casos previstos na Constituição, o salário mínimo não pode ser usado como indexador de base de cálculo de vantagem de servidor/empregado, nem ser substituído por decisão judicial. Impacta a base da insalubridade (levou à suspensão da Súmula 228). | VERIFICADO | STF \- RE 565.714/SP (SV 4) | 2026-08-14 |
+| Súmula 228 | Insalubridade \- base de cálculo | Eficácia SUSPENSA pelo STF em razão da SV 4 (a súmula adotava o salário básico como base). Na prática, mantém-se o salário mínimo como base até lei ou norma coletiva mais vantajosa. \[CONFERIR nº da Reclamação e relator no STF — a citação "RCL 6275/2024, Min. Lewandowski" foi removida por ser improvável/duvidosa\]. | SUSPENSO | STF \- em razão da SV 4 (Rcl a conferir) | 2026-08-14 |
+| Súmula 191 | Periculosidade \- base de cálculo | O adicional de periculosidade incide sobre o salário-base (não sobre gratificações, prêmios ou PLR); há regra própria para eletricitários. OBS.: a Súmula 192 trata de complementação de aposentadoria, NÃO de periculosidade. | A CONFERIR (número corrigido p/ 191) | TST (conferir redação) | 2026-08-14 |
 
 ### Correção Monetária e Juros
 
@@ -45,7 +45,7 @@ Responsável: Claude (Agente de Verificação)
 
 | Número | Tema | Teor | Status | Fonte | Verificado em |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| Súmula 437 | Intervalo intrajornada pós-Reforma | Art. 71, §4º da CLT. Intervalo reduzido em caso de trabalhador na mesma localidade e tempo contínuo de até 4 horas. | A CONFERIR | \- | \- |
+| Súmula 437 | Intervalo intrajornada | A não concessão ou concessão parcial do intervalo implica pagamento TOTAL do período correspondente, com +50% e natureza salarial (regime anterior). Pós-Reforma (art. 71, §4º, CLT, a partir de 11/11/2017): paga-se apenas o período suprimido, com +50%, natureza indenizatória. Ver sumulas-tst.md. | VERIFICADO | TST / meuvademecumonline | 2026-08-14 |
 
 ---
 
@@ -144,6 +144,7 @@ Responsável: Claude (Agente de Verificação)
 | Data | Entradas Verificadas | Entradas Suspensas | Observação |
 | :---- | :---- | :---- | :---- |
 | 2026-08-14 | Súmula 85, 366; SV 4, Súmula 228, Tema 1.046 | Súmula 228 (parcialmente) | 1ª passada completa. Correções: Súmula 85 (teor sobre compensação, não computador); Súmula 366 (cartão de ponto, não FGTS); Súmula 228 cassada parcialmente STF 2024\. |
+| 2026-08-14 (revisão) | Súmula 437 | \- | Correção manual de 5 entradas: Súmula 431 (é divisor 220, não intrajornada); Súmula 192→191 (periculosidade); Súmula 437 (teor correto do intervalo); SV 4 (redação da vedação dupla); Súmula 228 (removida citação duvidosa "RCL 6275/2024, Min. Lewandowski"). |
 
 ---
 
