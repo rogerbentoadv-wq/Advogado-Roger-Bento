@@ -1,10 +1,30 @@
 # Estilo de redação do escritório
 
-> **STATUS: CALIBRADO (v1)** a partir de peças reais protocoladas por
+> **STATUS: CALIBRADO (v2)** a partir de peças reais protocoladas por
 > **Róger Bento de Souza — OAB/RS 98.365** (pasta Google Drive
-> `ESCRITORIO/PEÇAS FINALIZADAS DR ALLAN/PROTOCOLADAS`). Base inicial: iniciais
-> "GRASIELA MARTINS" e "FERNANDO RONIEL DA LUZ DUARTE". Aprofundar com mais
-> peças na próxima ingestão.
+> `ESCRITORIO/PEÇAS FINALIZADAS DR ALLAN/PROTOCOLADAS`). Base: iniciais
+> "GRASIELA MARTINS", "FERNANDO RONIEL", "GEISON RAFAEL", "WILLIAN GABRIEL" e
+> "EMERSON CRISTIANO". Aprofundar com mais peças nas próximas ingestões.
+
+## Variações observadas (v2)
+
+- **Endereçamento** tem duas formas em uso: (a) `EXCELENTÍSSIMO(A) SENHOR(A)
+  DOUTOR(A) JUIZ(A) DA VARA DO TRABALHO DE [CIDADE]/RS`; (b) `AO JUÍZO DA ___ª
+  VARA DO TRABALHO DE [CIDADE]/RS`. Ambas válidas — usar a que o caso pedir.
+- **Preâmbulo** às vezes já traz o rol de fundamentos ("com fundamento nos arts.
+  ... da CLT, propor a presente").
+- **Tópicos frequentes adicionais:** `DA COMPETÊNCIA TERRITORIAL` (art. 651),
+  `DOS VALORES INDICADOS POR ESTIMATIVA` (art. 840, §1º), `DA TUTELA PROVISÓRIA E
+  DA PRESERVAÇÃO DA PROVA`, `DA SÍNTESE FÁTICA`.
+- **Subtópicos numerados** (7.1, 8.1, 12.1...) para desdobrar uma tese densa.
+- **Pedidos sucessivos** ("Subsidiariamente, caso não... requer..."), muito
+  usados em vínculo, natureza salarial de prêmios e base de cálculo.
+- **Rol de pedidos em tabela** (item / pedido / valor) é a forma preferida nas
+  causas com muitas verbas (ver "WILLIAN" e "GEISON").
+- **Uso frequente de "Temas" vinculantes** do TST/STF como reforço — ver
+  `jurisprudencia/precedentes-do-escritorio.md` (sempre `[CONFERIR Nº]`).
+- Fecho alterna entre "Termos em que, pede deferimento." e "Nestes termos, pede
+  deferimento.", com data por extenso OU "data do protocolo".
 
 O agente deve **emular fielmente** o padrão abaixo, mantendo a técnica jurídica
 e a regra de verificação de jurisprudência (banco `jurisprudencia/`).
