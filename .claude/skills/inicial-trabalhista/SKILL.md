@@ -46,10 +46,13 @@ que você já antecipa que a reclamada vai apresentar.
      legal e marque `[CONFERIR]`. É sempre preferível uma lacuna honesta a uma
      citação falsa. Uma citação inventada expõe o cliente e destrói a peça.
 
-   Consulte `jurisprudencia/README.md` para o protocolo. Antes de fundamentar um
-   tópico, abra o arquivo pertinente (`sumulas-tst.md`, `sumulas-trt4.md`,
+   Consulte `jurisprudencia/README.md` para o protocolo e a **ordem de
+   confiança** entre os arquivos. Antes de fundamentar um tópico, abra o arquivo
+   pertinente (`sumulas-tst.md`, `precedentes-do-escritorio.md`, `sumulas-trt4.md`,
    `orientacoes-jurisprudenciais-sdi.md`, `sumulas-vinculantes-stf.md`,
-   `teses-repetitivas-irr.md`) e use o que estiver VERIFICADO.
+   `teses-repetitivas-irr.md`, `jurisprudencia-VERIFICADO.md`) e use o que
+   estiver VERIFICADO. Atenção: `jurisprudencia-VERIFICADO.md` tem entradas a
+   corrigir listadas no README — não cite delas até conferência.
 
 3. **Todo pedido é certo, determinado e com valor estimado — SEM EXCEÇÃO.**
    Pós-Reforma, o art. 840, §1º, da CLT exige pedido **certo, determinado e com

@@ -78,4 +78,37 @@ Ver `ROTINA-ATUALIZACAO.md`. Cada passada de verificação:
 - `teses-repetitivas-irr.md` — IRR/IAC/temas repetitivos do TST e TRT-4.
 - `precedentes-do-escritorio.md` — ementas reais colhidas das peças protocoladas
   pela banca (material de reuso; conferir vigência).
+- `jurisprudencia-VERIFICADO.md` — banco em formato de tabelas (súmulas, OJs,
+  temas sensíveis) gerado por uma passada automática de verificação. **Ver
+  cautelas abaixo antes de citar dele.**
 - `ROTINA-ATUALIZACAO.md` — protocolo da passada de atualização.
+
+## Relação entre os arquivos e ordem de confiança
+
+Havendo divergência entre arquivos, siga esta ordem de confiança:
+1. `sumulas-tst.md` / `precedentes-do-escritorio.md` — curados com fonte e data
+   entrada a entrada (precedentes vêm das peças reais da banca).
+2. `jurisprudencia-VERIFICADO.md` — visão em tabela, útil para os **temas
+   sensíveis** (base de cálculo da insalubridade, Tema 1.046, correção/juros),
+   porém contém entradas a corrigir (abaixo). Não cite dele sem conferir.
+
+### ⚠️ Cautelas em `jurisprudencia-VERIFICADO.md` (a corrigir)
+
+Entradas com problema identificado — **não citar até conferência**:
+- **Súmula 431** descrita como "intervalo intrajornada irrenunciável": incorreto.
+  A Súmula 431 trata do **divisor 220** para 44h semanais. (marcada A CONFERIR)
+- **Súmula 192** descrita como "periculosidade": incorreto. Periculosidade é a
+  **Súmula 191**; a 192 trata de complementação de aposentadoria. (A CONFERIR)
+- **Súmula 437** com teor garbled ("intervalo reduzido... mesma localidade"):
+  o teor correto é o pagamento **integral** do intervalo suprimido (regime
+  anterior) — ver `sumulas-tst.md`. (A CONFERIR)
+- **Súmula 228 / RCL 6275/2024, "Min. Lewandowski"**: citação **duvidosa** — o
+  ministro deixou o STF em 2023, o que torna improvável uma decisão dele em
+  2024. Tratar a suspensão da Súmula 228 pela via da **SV 4** (Rcl/decisões do
+  STF a confirmar), sem afirmar esse número/relator até conferência.
+- **SV 4** marcada VERIFICADO com teor simplificado: a redação real veda usar o
+  salário mínimo como indexador **e** proíbe o Judiciário de substituí-lo sem
+  lei/norma coletiva — manter a nuance ao citar.
+
+> As entradas marcadas VERIFICADO neste arquivo que estão corretas (Súmulas 85 e
+> 366; Tema 1.046 do STF) podem ser usadas com a conferência final de praxe.
