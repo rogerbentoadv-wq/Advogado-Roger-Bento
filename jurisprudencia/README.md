@@ -76,4 +76,6 @@ Ver `ROTINA-ATUALIZACAO.md`. Cada passada de verificação:
 - `orientacoes-jurisprudenciais-sdi.md` — OJs da SDI-1, SDI-2 e Transitórias.
 - `sumulas-trt4.md` — Súmulas e teses do TRT da 4ª Região.
 - `teses-repetitivas-irr.md` — IRR/IAC/temas repetitivos do TST e TRT-4.
+- `precedentes-do-escritorio.md` — ementas reais colhidas das peças protocoladas
+  pela banca (material de reuso; conferir vigência).
 - `ROTINA-ATUALIZACAO.md` — protocolo da passada de atualização.
