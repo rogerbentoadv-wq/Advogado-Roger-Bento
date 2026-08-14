@@ -185,5 +185,68 @@ citar (a numeração muda de fonte para fonte e é fácil errar):
 
 ---
 
+## 8. Lote 2 — novas teses (peças Ronimar, Alessandro, Douglas)
+
+### Rescisão indireta — jornada extenuante
+**TRT-4 — ROT 0020610-67.2020.5.04.0772**
+- **Tese:** Sujeição a jornadas de mais de 12h consecutivas, de forma reiterada,
+  excede o direito humano à limitação de jornada e configura falta grave do
+  empregador (art. 483, "d") → rescisão indireta.
+- **Dados:** Rel. Marcelo José Ferlin D'Ambroso, 8ª Turma, j. 21/03/2023.
+- **Fonte:** "RONIMAR JULIO DA SILVA ADAM – RECLAMAÇÃO". **Status:** USADO PELA
+  BANCA. **Precedente do TRT-4 — prioritário na região.**
+
+### Rescisão indireta — FGTS não recolhido (por si só)
+**TRT-2 — 1000747-27.2020.5.02.0720**
+- **Tese:** O não recolhimento escorreito do FGTS à conta vinculada, **por si
+  só**, implica falta grave patronal a autorizar a rescisão indireta (art. 483,
+  "d").
+- **Dados:** Rel. Moisés dos Santos Heitor, 1ª Turma, pub. 15/09/2021.
+- **Fonte:** "DOUGLAS SALVADOR – RECLAMAÇÃO". **Status:** USADO PELA BANCA.
+
+### Desvio/acúmulo de função — diferenças salariais
+**TST — Ag-AIRR 0000096-75.2019.5.11.0015**
+- **Tese:** Demonstrado o exercício de atribuições que extrapolam em complexidade
+  as do cargo contratado (exigindo maior capacitação técnica), são devidas
+  diferenças salariais (revolver prova esbarra na Súmula 126 do TST).
+- **Dados:** Rel. Delaíde Alves Miranda Arantes, 8ª Turma, j. 22/03/2023.
+- **Fonte:** "ALESSANDRO ANGELI DA ROSA – RECLAMAÇÃO". **Status:** USADO PELA
+  BANCA. **TST.**
+
+### Dano moral — acúmulo de função
+**TRT-4 — ROT 0020196-27.2022.5.04.0731**
+- **Tese:** Execução de atividades estranhas à função contratada, com frustração
+  quanto ao recebimento de parcela salarial complementar, gera abalo psíquico
+  indenizável (dano moral).
+- **Dados:** Rel. Marcelo José Ferlin D'Ambroso, 8ª Turma, j. 16/05/2023.
+- **Fonte:** "ALESSANDRO ANGELI DA ROSA – RECLAMAÇÃO". **Status:** USADO PELA
+  BANCA. **Precedente do TRT-4 — prioritário na região.**
+
+### Ressarcimento pelo uso de veículo próprio em serviço
+**TRT-4 — ROT 0020976-41.2018.5.04.0202**
+- **Tese:** Incumbe ao empregador ressarcir os gastos do uso de veículo
+  particular em serviço (presumíveis); o contrário transfere ao empregado o ônus
+  da atividade e chancela enriquecimento sem causa.
+- **Dados:** Rel. Rejane Souza Pedra, 5ª Turma, j. 27/03/2023.
+- **Fonte:** "ALESSANDRO ANGELI DA ROSA – RECLAMAÇÃO". **Status:** USADO PELA
+  BANCA. **Precedente do TRT-4 — prioritário na região.**
+
+### Dano moral — assédio moral / tratamento hostil
+**TRT-6 — RO 0001201-06.2017.5.06.0142**
+- **Tese:** Tratamento habitual hostil, abusivo, grosseiro e desrespeitoso
+  caracteriza assédio moral e enseja reparação; é dever do empregador prover
+  ambiente laboral sadio.
+- **Dados:** Red. Eneida Melo Correia de Araújo, 2ª Turma, j. 12/05/2020.
+- **Fonte:** "DOUGLAS SALVADOR – RECLAMAÇÃO". **Status:** USADO PELA BANCA.
+
+> **Observação de estilo (não jurisprudência):** as peças de motorista (Ronimar,
+> Douglas) trazem teses recorrentes reaproveitáveis — invalidade de banco de
+> horas opaco, descontos indevidos por recompra/avaria/mercadoria (art. 462 e
+> art. 2º da CLT), diferenças de alimentação/cesta por CCT, nulidade de pedido de
+> demissão convertido em rescisão indireta. Registrar no estilo/teses conforme
+> a evolução.
+
+---
+
 > **Próxima ingestão:** colher as ementas das demais iniciais e réplicas
 > protocoladas, priorizando TRT-4 e TST, e agrupar por tese.
