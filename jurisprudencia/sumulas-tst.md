@@ -70,6 +70,51 @@ Formato e regras de status: ver `README.md` deste diretório. Só cite entradas
   **"20 trabalhadores"** — há divergência sobre o número aplicável. `[CONFERIR]`
   a orientação atual do TRT-4.
 
+### 448 — Insalubridade: limpeza de banheiros de uso coletivo
+- **Órgão:** TST
+- **Texto (item II):** A higienização de instalações sanitárias de uso público
+  ou coletivo de grande circulação, e a respectiva coleta de lixo, por não se
+  equiparar à limpeza em residências e escritórios, enseja o pagamento de
+  adicional de insalubridade em **grau máximo** (Anexo 14 da NR-15).
+- **Fonte:** citada em peças protocoladas do escritório (Ana Cristina) + TST
+  Ag 0010683-24.2018.5.03.0013.
+- **Verificado em:** 2026-08-14. **Status:** VERIFICADO (tema↔número).
+- **Observações:** base de cálculo do adicional — ver controvérsia da SV 4 /
+  Súmula 228 (suspensa). Item I trata de agentes não previstos na NR-15.
+
+### 463 — Justiça gratuita: comprovação
+- **Órgão:** TST
+- **Texto (item I):** A partir de 26.06.2017, basta a **declaração de
+  hipossuficiência** firmada pela parte ou por advogado com poderes específicos
+  (art. 105 do CPC) para a concessão da gratuidade à pessoa natural.
+- **Fonte:** peças protocoladas (Ana Cristina) + Res. 219/2017 do TST.
+- **Verificado em:** 2026-08-14. **Status:** VERIFICADO (tema↔número).
+
+### 461 — FGTS: ônus da prova dos depósitos
+- **Órgão:** TST
+- **Texto:** É do empregador o ônus de comprovar a regularidade dos depósitos do
+  FGTS, por ser o detentor dos documentos.
+- **Fonte:** peças protocoladas (Ana Cristina).
+- **Verificado em:** 2026-08-14. **Status:** VERIFICADO (tema↔número).
+
+### 132 — Adicional de periculosidade: integração
+- **Órgão:** TST
+- **Texto (item I):** O adicional de periculosidade pago em caráter permanente
+  integra o cálculo de indenização e de horas extras.
+- **Fonte:** peças protocoladas (Erico) + TRT-2 1000779-52.2021.5.02.0314.
+- **Verificado em:** 2026-08-14. **Status:** VERIFICADO (tema↔número).
+
+### 47 — Insalubridade: exposição intermitente
+- **Órgão:** TST
+- **Texto:** O trabalho executado em condições insalubres, embora de forma
+  **intermitente**, dá direito ao adicional de insalubridade.
+- **Fonte:** peças protocoladas (Ana Cristina) + TRT-4 ROT
+  0021487-08.2024.5.04.0403.
+- **Verificado em:** 2026-08-14. **Status:** VERIFICADO (tema↔número).
+
+> Nota: "VERIFICADO (tema↔número)" = número e tema conferidos contra fonte; o
+> advogado ainda confere a **redação oficial** atual antes do protocolo.
+
 ---
 
 ## A conferir (não citar sem `[CONFERIR]`)

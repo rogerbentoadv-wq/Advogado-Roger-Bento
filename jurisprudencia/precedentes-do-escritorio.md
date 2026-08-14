@@ -248,5 +248,77 @@ citar (a numeração muda de fonte para fonte e é fácil errar):
 
 ---
 
+## 9. Lote 3 — novas teses (peças Erico e Ana Cristina)
+
+### Integração do adicional de periculosidade
+**TRT-2 — 1000779-52.2021.5.02.0314** — Adicional de periculosidade habitual
+integra o salário para verbas rescisórias (Súmula 132, I, do TST). Rel. Antero
+Arantes Martins, 6ª Turma, pub. 01/07/2022. Fonte: "ERICO DE ALMEIDA SANTOS".
+USADO PELA BANCA.
+
+**TRT-10 — ROT 0000925-85.2020.5.10.0003** — Verbas rescisórias calculam-se sobre
+todas as parcelas salariais (adicional noturno e periculosidade habituais), não
+só o salário-base. Rel. Elaine Machado Vasconcelos, 1ª Turma, j. 10/05/2024.
+Fonte: "ERICO DE ALMEIDA SANTOS". USADO PELA BANCA.
+
+### Uso de bem próprio em serviço (alteridade)
+**TRT-4 — ROT 0020164-69.2019.5.04.0232** — Uso de celular particular em serviço
+gera indenização. 8ª Turma, j. 10/05/2022. Fonte: "ERICO". USADO PELA BANCA.
+**Precedente do TRT-4.**
+
+**TRT-3 — RO 0010758-92.2020.5.03.0110** — Uso de veículo próprio em serviço:
+ressarcimento dos custos diretos/indiretos (princípio da alteridade, art. 2º
+CLT). Rel. Emerson José Alves Lage, 1ª Turma, j. 16/09/2021. Fonte: "ERICO".
+USADO PELA BANCA.
+
+### Dano moral — jornada extenuante
+**TRT-10 — RO 0001673-89.2017.5.10.0111** — Imposição de jornadas extenuantes com
+horas extras frequentes viola saúde/higiene/segurança e gera dano moral.
+j. 24/10/2018. Fonte: "ERICO". USADO PELA BANCA.
+
+### Insalubridade grau máximo — limpeza de banheiros/coleta de lixo
+**TST — Ag 0010683-24.2018.5.03.0013** — Limpeza e coleta de lixo de banheiros de
+uso coletivo/grande circulação (supermercado) → insalubridade **grau máximo**
+(Anexo 14 da NR-15; Súmula 448, II, do TST). Rel. Alexandre de Souza Agra
+Belmonte, 3ª Turma, j. 24/02/2021. Fonte: "ANA CRISTINA SANTOS DE SOUZA". USADO
+PELA BANCA. **TST.**
+
+**TRT-4 — ROT 0021487-08.2024.5.04.0403** — Mero fornecimento de EPI (mesmo com
+CA) não afasta insalubridade sem prova de eficácia e monitoramento do uso;
+exposição habitual ainda que intermitente não afasta o adicional (Súmula 47 do
+TST). 5ª Turma, j. 28/04/2026. Fonte: "ANA CRISTINA". USADO PELA BANCA.
+**Precedente do TRT-4 — prioritário.**
+
+**TRT-4 — RO 0020632-34.2016.5.04.0007** — Limpeza de banheiros é insalubre em
+grau máximo (agentes biológicos, não elididos por EPI — Súmula 448, II); e
+acúmulo de função gera acréscimo salarial. 8ª Turma, j. 29/04/2019. Fonte: "ANA
+CRISTINA". USADO PELA BANCA. **Precedente do TRT-4.**
+
+### Acúmulo/desvio de função
+**TST — AIRR 1002326-22.2016.5.02.0050** — Exercício de funções além da contratada
+(locutor) gera adicional por acúmulo; revolver prova esbarra na Súmula 126. Rel.
+Dora Maria da Costa, 8ª Turma, j. 12/06/2019. Fonte: "ANA CRISTINA". USADO PELA
+BANCA. **TST.**
+
+**TRT-4 — RO 0020935-58.2017.5.04.0251** — Exercício de atividades não inerentes à
+função contratada configura acúmulo e enseja diferenças salariais. 5ª Turma,
+j. 05/06/2019. Fonte: "ANA CRISTINA". USADO PELA BANCA. **Precedente do TRT-4.**
+
+### Dispensa discriminatória / retaliatória
+**TRT-18 — ROT 0010255-13.2022.5.18.0004** — Dispensa em retaliação a reclamação
+legítima do empregado (ex.: cobrança de adicional de insalubridade) configura
+dispensa discriminatória (Lei 9.029/95) + dano moral, cumuláveis. Rel. Welington
+Luis Peixoto, 1ª Turma. Fonte: "ANA CRISTINA". USADO PELA BANCA.
+
+### Justiça gratuita — presunção da declaração
+**TRT-4 — RO 0020099-75.2016.5.04.0201** (Rel. Tânia Regina Silva Reckziegel, 2ª
+Turma, pub. 16/03/2018); **TRT-6 — RO 0001367-63.2016.5.06.0145** (Red. Paulo
+Alcântara, 2ª Turma, j. 21/01/2019); **TRT-1 — 0000008-21.2017.5.01.0521** (Rel.
+Márcia Leite Nery, 5ª Turma) — declaração de hipossuficiência da pessoa natural
+goza de presunção de veracidade (art. 99, §3º, CPC; Súmula 463, I, do TST).
+Fonte: "ANA CRISTINA". USADO PELA BANCA.
+
+---
+
 > **Próxima ingestão:** colher as ementas das demais iniciais e réplicas
 > protocoladas, priorizando TRT-4 e TST, e agrupar por tese.
