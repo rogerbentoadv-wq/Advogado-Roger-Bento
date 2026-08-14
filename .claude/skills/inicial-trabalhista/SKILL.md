@@ -51,11 +51,16 @@ que você já antecipa que a reclamada vai apresentar.
    `orientacoes-jurisprudenciais-sdi.md`, `sumulas-vinculantes-stf.md`,
    `teses-repetitivas-irr.md`) e use o que estiver VERIFICADO.
 
-3. **Todo pedido é certo, determinado e com valor.** Pós-Reforma, o art. 840,
-   §1º, da CLT exige pedido **certo, determinado e com indicação de valor**.
-   Pedido genérico é indeferido de plano. Cada pedido leva memória de cálculo
-   ou, quando depender de prova ainda não produzida (perícia, documentos da ré),
-   estimativa fundamentada com ressalva expressa.
+3. **Todo pedido é certo, determinado e com valor estimado — SEM EXCEÇÃO.**
+   Pós-Reforma, o art. 840, §1º, da CLT exige pedido **certo, determinado e com
+   indicação de valor**. **Toda peça sai com um cálculo estimado (simples) ao
+   lado de cada pedido e o valor da causa (soma) ao final** — é regra fixa do
+   escritório, nunca omitir. O cálculo é simples e conservador (não é liquidação
+   de sentença): siga `references/liquidacao-e-calculos.md`. Quando o valor
+   depender de dado ausente ou de perícia, use premissa razoável, marque
+   `[CÁLCULO A CONFIRMAR]` e mantenha a ressalva do art. 840, §1º. Pedidos que
+   são obrigação de fazer (anotação de CTPS, entrega de guias) entram listados
+   como "obrigação de fazer" / "a apurar".
 
 4. **Antecipe a defesa.** Ao redigir cada tópico, pergunte-se: como a reclamada
    vai se defender disso? Distribua o ônus da prova (art. 818 da CLT e Súmulas
@@ -129,6 +134,8 @@ testemunhas — recuse e explique o risco.
 
 - `references/checklist-entrevista.md` — roteiro de coleta de fatos.
 - `references/estrutura-da-peca.md` — anatomia técnica da inicial.
+- `references/liquidacao-e-calculos.md` — cálculo estimado por pedido + valor da
+  causa (regra obrigatória; fórmulas simples).
 - `references/teses/verbas-rescisorias.md`
 - `references/teses/jornada-horas-extras.md`
 - `references/teses/insalubridade-periculosidade.md`
