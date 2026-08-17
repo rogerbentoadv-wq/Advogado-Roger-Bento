@@ -28,6 +28,7 @@ from docx.shared import Pt, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
 
 
 def set_base_style(document):
@@ -49,7 +50,40 @@ def set_base_style(document):
         section.left_margin = section.right_margin = Cm(2.5)
 
 
+def add_page_footer(document):
+    """Rodapé 'Página X de Y', centralizado — padrão das peças do escritório."""
+    footer = document.sections[0].footer
+    p = footer.paragraphs[0] if footer.paragraphs else footer.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.text = ""
+
+    def field(instr):
+        fld = OxmlElement("w:fldSimple")
+        fld.set(qn("w:instr"), instr)
+        r = OxmlElement("w:r")
+        fld.append(r)
+        return fld
+
+    run = p.add_run("Página ")
+    run.font.name = "Times New Roman"
+    run.font.size = Pt(10)
+    p._p.append(field(" PAGE "))
+    run = p.add_run(" de ")
+    run.font.name = "Times New Roman"
+    run.font.size = Pt(10)
+    p._p.append(field(" NUMPAGES "))
+
+
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
+
+# Títulos que identificam a espécie de peça — vão centralizados sob o
+# endereçamento, como nas peças protocoladas do escritório.
+TIPO_DE_PECA_RE = re.compile(
+    r"^(RECLAMA(ÇÃO|TÓRIA) TRABALHISTA|RECURSO ORDINÁRIO|CONTESTAÇÃO|RÉPLICA|"
+    r"EMBARGOS DE DECLARAÇÃO|AGRAVO DE PETIÇÃO|RECURSO DE REVISTA)$"
+)
+# Linha que qualifica o rito, logo abaixo do tipo de peça.
+RITO_RE = re.compile(r"^(pelo|sob o) rito (ordinário|sumaríssimo|sumário)$", re.I)
 
 
 def add_runs_with_bold(paragraph, text):
@@ -101,6 +135,7 @@ def main():
 
     document = Document()
     set_base_style(document)
+    add_page_footer(document)
 
     i = 0
     while i < len(lines):
@@ -129,16 +164,48 @@ def main():
                             run.bold = True
             continue
 
+        # próxima linha não vazia (usada para reconhecer o bloco de assinatura)
+        proxima = next((l.strip() for l in lines[i + 1:] if l.strip()), "")
+
         p = document.add_paragraph()
         text = re.sub(r"^#+\s*", "", stripped)
 
-        if is_heading(line):
+        # citação recuada: ementas, súmulas e doutrina marcadas com "> " no .md
+        if stripped.startswith(">"):
+            texto_citacao = re.sub(r"^>\s?", "", stripped)
+            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            pf = p.paragraph_format
+            pf.left_indent = Cm(4.0)
+            pf.line_spacing = 1.0
+            pf.space_before = Pt(6)
+            pf.space_after = Pt(6)
+            add_runs_with_bold(p, texto_citacao)
+            for run in p.runs:
+                run.font.size = Pt(10)
+            i += 1
+            continue
+
+        if TIPO_DE_PECA_RE.match(text.replace("**", "")) or RITO_RE.match(text):
+            # espécie da peça e rito: centralizados, a espécie em negrito
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            run = p.add_run(text.replace("**", ""))
+            run.bold = bool(TIPO_DE_PECA_RE.match(text.replace("**", "")))
+        elif "OAB" in stripped or "OAB" in proxima:
+            # bloco de assinatura: nome do advogado e linha da OAB
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            run = p.add_run(text.replace("**", ""))
+            run.bold = True
+        elif stripped.lower() in (
+            "termos em que, pede deferimento.",
+            "termos em que pede deferimento.",
+            "nestes termos, pede deferimento.",
+        ):
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            add_runs_with_bold(p, text)
+        elif is_heading(line):
             p.alignment = WD_ALIGN_PARAGRAPH.LEFT
             run = p.add_run(text.replace("**", ""))
             run.bold = True
-        elif "OAB" in stripped or stripped.lower() == "termos em que, pede deferimento." or stripped.lower() == "nestes termos, pede deferimento.":
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            add_runs_with_bold(p, text)
         else:
             p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
             add_runs_with_bold(p, text)
