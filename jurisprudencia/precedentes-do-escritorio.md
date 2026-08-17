@@ -322,3 +322,74 @@ Fonte: "ANA CRISTINA". USADO PELA BANCA.
 
 > **Próxima ingestão:** colher as ementas das demais iniciais e réplicas
 > protocoladas, priorizando TRT-4 e TST, e agrupar por tese.
+
+---
+
+## 10. Lote 4 — teses das peças LIMTEC (motoristas DSEI)
+
+Colhidas das iniciais protocoladas contra **LIMTEC SERVIÇOS ESPECIALIZADOS LTDA -
+ME** (CNPJ 05.792.339/0001-91): "TIAGO PADILHA DOS SANTOS", "ELOIR DE OLIVEIRA",
+"JEFERSON DA SILVA MATTOS" e "RUDNEI GOMES VERÁ DE OLIVEIRA". Reuso direto em
+novos casos contra a mesma reclamada.
+
+### Insalubridade — motorista que transporta pacientes (agentes biológicos)
+**TRT-4 — ROT 00201870920215040761**
+- **Tese:** Exposição a agentes biológicos de grande potencial de risco pelo
+  contato com portadores de doenças infectocontagiosas enseja adicional de
+  insalubridade em **grau máximo**. Avaliação **qualitativa** (Anexo 14 da NR-15,
+  Portaria 3.214/78).
+- **Dados:** Rel. Rejane Souza Pedra, 5ª Turma, j. 19/09/2023.
+- **Fonte:** "TIAGO PADILHA DOS SANTOS" e "ELOIR DE OLIVEIRA". **Status:** USADO
+  PELA BANCA. **Precedente do TRT-4 — prioritário na região.**
+  `[CONFERIR TRANSCRIÇÃO]`
+
+**TRT-6 — ROT 00000614720235060102**
+- **Tese:** Motoristas de ambulância expostos à Covid-19 fazem jus ao adicional
+  em **grau máximo (40%) de 11/03/2020 a 22/05/2022** (Portaria GM/MS 913
+  encerrou a ESPIN) e, **a partir de 23/05/2022, em grau médio (20%)**. EPI
+  minimiza mas não elide o adicional quando comprovada a exposição.
+- **Dados:** Rel. Carmen Lucia Vieira do Nascimento, 1ª Turma, j. 28/01/2026.
+- **Fonte:** "TIAGO PADILHA DOS SANTOS" e "ELOIR DE OLIVEIRA". **Status:** USADO
+  PELA BANCA. `[CONFERIR TRANSCRIÇÃO]`
+- **Observação:** o marco temporal 11/03/2020 → 22/05/2022 é o ponto mais útil da
+  ementa para dosar o grau por período.
+
+### Jornada 12x36 inválida — horas extras integrais (não só o adicional)
+**TRT-2 — 10000684920215020087**
+- **Tese:** A 12x36 só é válida com lei, acordo escrito ou norma coletiva e
+  **desde que não haja prestação habitual de horas extras**, que invalida o
+  regime. Descaracterizado, são devidas as horas excedentes da 8ª diária e 44ª
+  semanal, **inaplicável a Súmula 85 do TST**.
+- **Dados:** Rel. Ivani Contini Bramante, 4ª Turma, pub. 17/11/2021.
+- **Fonte:** "ELOIR DE OLIVEIRA". **Status:** USADO PELA BANCA.
+  `[CONFERIR TRANSCRIÇÃO]`
+
+**TST — Ag-RR 00201288920195040761**
+- **Tese:** Ausência de norma coletiva autorizativa da escala 12x36 (Súmula 444
+  do TST) e trabalho nas folgas próprias do regime → deferimento das **horas
+  extras, e não apenas do adicional**, a partir da 8ª diária e 44ª semanal, de
+  forma não cumulativa; **o item IV da Súmula 85 não se aplica** à invalidade da
+  12x36.
+- **Dados:** Rel. Maurício Godinho Delgado, 3ª Turma, j. 19/10/2022, pub.
+  21/10/2022. **Origem: TRT-4 (0761 = Viamão).**
+- **Fonte:** "ELOIR DE OLIVEIRA". **Status:** USADO PELA BANCA. **TST.**
+  `[CONFERIR TRANSCRIÇÃO]`
+
+### Aviso-prévio proporcional exigido como trabalho (tese própria da banca)
+- **Tese:** A proporcionalidade da Lei 12.506/2011 é **direito do empregado**, não
+  faculdade do empregador de exigir labor além de 30 dias. Os dias excedentes a
+  30 devem ser **indenizados**; exigi-los trabalhados converte parcela protetiva
+  em vantagem operacional da empresa e ainda desloca artificialmente o termo
+  inicial do prazo do art. 477, § 6º, da CLT.
+- **Cálculo usado:** `salário ÷ 30 × (dias de aviso − 30)`.
+- **Fonte:** "TIAGO PADILHA" (18 dias), "ELOIR DE OLIVEIRA" (15 dias).
+  **Status:** TESE DA BANCA — sem precedente colhido; fundamentar na lei.
+  `[CONFERIR: buscar precedente do TRT-4 para reforço]`
+
+> **Nota de recorrência (LIMTEC):** nas rescisões desses contratos a empregadora
+> lançou aviso-prévio de 01/02/2026 a 18/03/2026 para vários empregados, com
+> rubricas de horas extras, adicional noturno e insalubridade **zeradas** no
+> TRCT. Conferir sempre, no extrato do FGTS, o "VALOR PARA FINS RESCISÓRIOS"
+> contra o lançamento "DEP MULTA RESCISORIA" — no caso "TIAGO TIMÓTEO" a multa
+> de 40% foi recolhida a menor (R$ 2.925,04 sobre base de R$ 12.257,37, quando
+> os 40% seriam R$ 4.902,95).
