@@ -143,7 +143,11 @@ no chat. Procedimento:
    - **ementas/citações** de jurisprudência começando a linha com `> ` (viram
      bloco recuado em itálico);
    - rol/valores de pedidos como **tabela Markdown** (`| ... |`);
-   - a linha `RECLAMAÇÃO TRABALHISTA` sozinha (centralizada automaticamente).
+   - a linha `RECLAMAÇÃO TRABALHISTA` sozinha (centralizada automaticamente);
+   - **todo campo a preencher ou a conferir entre colchetes `[...]`** — o
+     conversor os deixa em **VERMELHO** automaticamente (ex.: `[NOME COMPLETO]`,
+     `[CPF]`, `[DATA DE ADMISSÃO]`, `[CONFERIR: Súmula X]`,
+     `[CÁLCULO A CONFIRMAR]`). Nunca invente o dado; deixe o colchete vermelho.
 2. **Gere o `.docx` SOMENTE pelo conversor** (nunca de outra forma):
    `python3 scripts/gerar_docx.py <peca>.md <peca>.docx`
    Ele aplica o padrão do escritório, **calibrado sobre modelo real** (ROSELI DA

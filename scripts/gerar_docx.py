@@ -28,7 +28,7 @@ except ImportError:
     import docx
 
 from docx import Document
-from docx.shared import Pt, Cm
+from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
@@ -97,15 +97,33 @@ def set_base_style(document):
         s.top_margin = s.bottom_margin = s.left_margin = s.right_margin = Cm(2.0)
 
 
-def add_bold(paragraph, text, size=CORPO):
+VERMELHO = RGBColor(0xFF, 0x00, 0x00)
+# tokens inline: **negrito** ou [placeholder a preencher/conferir]
+TOKEN = re.compile(r"\*\*(.+?)\*\*|\[[^\]]*\]")
+
+
+def add_runs(paragraph, text, size=CORPO, base_bold=False, italic=False):
+    """Adiciona texto interpretando **negrito** e deixando [colchetes] em VERMELHO."""
     pos = 0
-    for m in BOLD_RE.finditer(text):
+    added = False
+    for m in TOKEN.finditer(text):
         if m.start() > pos:
-            _font(paragraph.add_run(text[pos:m.start()]), size=size)
-        _font(paragraph.add_run(m.group(1)), size=size, bold=True)
+            _font(paragraph.add_run(text[pos:m.start()]), size=size, bold=base_bold, italic=italic)
+        tok = m.group(0)
+        if tok.startswith("**"):
+            inner = m.group(1)
+            r = paragraph.add_run(inner)
+            _font(r, size=size, bold=True, italic=italic)
+            if inner.strip().startswith("[") and inner.strip().endswith("]"):
+                r.font.color.rgb = VERMELHO  # placeholder em negrito -> negrito + vermelho
+        else:  # [ ... ] -> campo a preencher / conferir -> vermelho
+            r = paragraph.add_run(tok)
+            _font(r, size=size, bold=base_bold, italic=italic)
+            r.font.color.rgb = VERMELHO
         pos = m.end()
-    if pos < len(text):
-        _font(paragraph.add_run(text[pos:]), size=size)
+        added = True
+    if pos < len(text) or not added:
+        _font(paragraph.add_run(text[pos:]), size=size, bold=base_bold, italic=italic)
 
 
 def is_heading(s):
@@ -173,7 +191,7 @@ def main():
                         para = rc[c].paragraphs[0]
                         para.paragraph_format.first_line_indent = Cm(0)
                         para.paragraph_format.line_spacing = 1.0
-                        _font(para.add_run(val.replace("**", "")), size=11, bold=(r == 0))
+                        add_runs(para, val, size=11, base_bold=(r == 0))
                 wrote = True
             continue
 
@@ -188,23 +206,23 @@ def main():
 
         if RE_ENDERECO.match(s):
             p.alignment = J; pf.first_line_indent = Cm(0)
-            _font(p.add_run(text.replace("**", "")), bold=True)
+            add_runs(p, text, base_bold=True)
         elif RE_TITULO.match(text):
             p.alignment = C; pf.first_line_indent = Cm(0)
-            _font(p.add_run(text.replace("**", "")), bold=True)
+            add_runs(p, text, base_bold=True)
         elif RE_CIDADE_DATA.match(s) or RE_OAB.search(s) or (is_heading(s) and RE_OAB.search(next_nonempty(lines, i))):
             # bloco de assinatura: cidade/data, nome do advogado, OAB
             p.alignment = C; pf.first_line_indent = Cm(0)
-            _font(p.add_run(text.replace("**", "")), bold=True)
+            add_runs(p, text, base_bold=True)
         elif s.startswith(">"):
             p.alignment = J; pf.first_line_indent = Cm(0); pf.left_indent = RECUO_EMENTA
-            add_bold(p, re.sub(r"^>\s?", "", s))
+            add_runs(p, re.sub(r"^>\s?", "", s))
         elif is_heading(s):
             p.alignment = J; pf.first_line_indent = RECUO
-            _font(p.add_run(text.replace("**", "")), bold=True)
+            add_runs(p, text, base_bold=True)
         else:
             p.alignment = J; pf.first_line_indent = RECUO
-            add_bold(p, text)
+            add_runs(p, text)
         wrote = True
         i += 1
 
