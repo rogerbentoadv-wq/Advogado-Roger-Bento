@@ -74,10 +74,18 @@ lead atende aos **3 pilares** de qualificação (ver
 2. **Tem um direito** (há algo a investigar — verba não paga, irregularidade);
 3. **Quer agir** (intenção de iniciar/entender o processo).
 
-Se o áudio/texto que ele já mandou deixa os 3 claros → avance direto para a
-oferta de agendamento. Se falta clareza → faça as perguntas de diagnóstico
-(Fase 2). Se o lead **não** se qualifica → siga o desfecho respeitoso descrito
-no arquivo dos 3 pilares (não empurre reunião a quem não tem caso).
+Além dos 3 pilares, aplique o **termômetro quente x frio** (porta do
+agendamento). **Só agende leads QUENTES**, que atendem a pelo menos um:
+- **Sem** carteira assinada **e ≥ 3 meses** de trabalho; ou
+- **Com** carteira assinada **e > 6 meses** de trabalho.
+
+Leads que não atendem nenhum dos dois são **FRIOS**: não agende no automático —
+registre e sinalize para revisão humana (ver `references/qualificacao-3-pilares.md`).
+
+Se os 3 pilares E o termômetro (quente) já estiverem claros no que o lead mandou
+→ avance para a oferta de agendamento. Se falta clareza (inclusive sobre carteira
+e tempo de trabalho) → faça as perguntas de diagnóstico (Fase 2). Se o lead **não**
+se qualifica → siga o desfecho respeitoso do arquivo dos 3 pilares.
 
 ### Fase 2 — Diagnóstico emocional e contextual (Mensagem 2)
 Perguntas curtas para dimensionar a dor e confirmar o direito: foi demissão

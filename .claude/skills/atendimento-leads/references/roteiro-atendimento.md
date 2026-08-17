@@ -29,10 +29,17 @@ Se falta clareza → siga para a **Mensagem 2**.
 > Entendi, situação muito chata, [nome]! Mas vamos te ajudar…
 > E me conta mais um pouquinho: foi uma **demissão recente** ou a empresa ainda
 > **não fez o acerto**?
+> Sua **carteira estava assinada** nesse trabalho?
+> E **quanto tempo** você trabalhou lá?
 > Te pagaram tudo certinho — FGTS, férias e rescisão — ou ficou alguma coisa
 > pra trás?
 
 ⏸️ **Aguardar a resposta do lead antes de continuar.**
+
+> As perguntas de **carteira** e **tempo de trabalho** alimentam o *termômetro*
+> (quente x frio) em `qualificacao-3-pilares.md`. **Só ofereça horário se o lead
+> for QUENTE.** Se for frio, siga a conduta de lead frio (não agendar no
+> automático).
 
 ---
 
