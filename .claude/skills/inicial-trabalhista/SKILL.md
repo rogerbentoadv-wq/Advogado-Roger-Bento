@@ -146,12 +146,16 @@ no chat. Procedimento:
    - a linha `RECLAMAÇÃO TRABALHISTA` sozinha (centralizada automaticamente).
 2. **Gere o `.docx` SOMENTE pelo conversor** (nunca de outra forma):
    `python3 scripts/gerar_docx.py <peca>.md <peca>.docx`
-   Ele aplica o padrão forense uniforme: Times New Roman 12, **justificado**,
-   espaçamento 1,5, **recuo de 1ª linha de 1,25 cm**, margens (esq. 3 cm),
-   tópicos em negrito, título e assinatura centralizados, ementas recuadas,
-   tabelas do Word (autoinstala o python-docx se faltar). **Nunca** entregue um
-   `.docx` com marcações de markdown visíveis (`**`, `#`, `|`) — se aparecerem,
-   a peça não passou pelo conversor; refaça.
+   Ele aplica o padrão do escritório, **calibrado sobre modelo real** (ROSELI DA
+   ROSA SCRINZ): A4 com **margens 2 cm**, Times New Roman 12, **justificado**,
+   entrelinha 1,5, **recuo de 1ª linha de 1,5 cm no corpo e nos títulos**
+   (títulos de tópico em negrito, também justificados), endereçamento em negrito,
+   **"RECLAMAÇÃO TRABALHISTA" e o bloco de assinatura (cidade/data, nome, OAB)
+   centralizados em negrito**, "pede deferimento" no corpo, ementas recuadas
+   4 cm, tabelas do Word, separação de blocos por linha em branco (autoinstala o
+   python-docx se faltar). **Nunca** entregue um `.docx` com marcações de
+   markdown visíveis (`**`, `#`, `|`) — se aparecerem, a peça não passou pelo
+   conversor; refaça.
 3. **Entregue o arquivo ao usuário** com a ferramenta de envio de arquivos
    (SendUserFile), nomeando-o pelo cliente (ex.: `FULANO DE TAL - RECLAMAÇÃO.docx`).
 4. **Arquive o `.docx` na pasta do cliente no Google Drive** (a pasta

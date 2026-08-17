@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """
-Gera uma petição .docx EDITÁVEL e PADRONIZADA a partir de um arquivo Markdown.
+Gera uma petição .docx EDITÁVEL a partir de um Markdown, replicando o padrão
+das peças do escritório (calibrado sobre modelo real ROSELI DA ROSA SCRINZ).
 
 Uso:
     python3 scripts/gerar_docx.py entrada.md saida.docx
 
-Padrão forense aplicado (uniforme em toda a peça):
-- A4, margens: esquerda 3 cm, direita/superior/inferior 2,5 cm
-- Corpo: Times New Roman 12, JUSTIFICADO, espaçamento 1,5, recuo de 1ª linha 1,25 cm
-- Títulos de tópico (linhas iniciadas por # ou em CAIXA ALTA): negrito, à esquerda,
-  sem recuo, com espaço antes/depois
-- "RECLAMAÇÃO TRABALHISTA" (e variantes) e o fecho/assinatura: centralizados
-- Ementas/citações (linhas iniciadas por ">"): recuadas, itálico, corpo 11
-- **negrito** inline suportado; tabelas Markdown viram tabelas do Word
-- Nenhuma marcação de markdown deve sobrar visível no resultado
+Padrão aplicado:
+- A4, margens 2,0 cm em todos os lados
+- Times New Roman 12, JUSTIFICADO, entrelinha 1,5, sem espaço antes/depois
+- Recuo de 1ª linha de 1,5 cm no corpo E nos títulos de tópico (títulos em negrito)
+- Endereçamento (EXCELENTÍSSIMO/AO JUÍZO...): negrito, justificado, sem recuo
+- "RECLAMAÇÃO TRABALHISTA" (linha isolada): centralizado, negrito
+- Ementas/citações (linhas iniciadas por ">"): recuo à esquerda de 4 cm
+- Cidade/data, nome do advogado e OAB: centralizados em negrito
+- Separação entre blocos por linha em branco (preservada como parágrafo vazio)
+- **negrito** inline; tabelas Markdown viram tabelas do Word
 
-Se o python-docx não estiver instalado, o script tenta instalá-lo.
+Instala o python-docx automaticamente se faltar.
 """
 import sys, re, subprocess
 
@@ -31,162 +33,156 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 
-FONTE = "Times New Roman"
-CORPO = 12
-INDENT = Cm(1.25)
+FONTE, CORPO = "Times New Roman", 12
+RECUO = Cm(1.5)
+RECUO_EMENTA = Cm(4.0)
 
-TITULO_ACAO = re.compile(r"^\s*RECLAMA(ÇÃO|CAO)\s+TRABALHISTA\s*$", re.IGNORECASE)
-FECHO = re.compile(r"^\s*(nestes|termos em que)[,]?\s+.*pede deferimento\.?\s*$", re.IGNORECASE)
+RE_ENDERECO = re.compile(r"^\s*(EXCELENT[IÍ]SSIM|EXM|AO JU[IÍ]ZO|MERIT[IÍ]SSIM)", re.IGNORECASE)
+RE_TITULO = re.compile(r"^\s*RECLAMA(ÇÃO|CAO)\s+TRABALHISTA\s*$", re.IGNORECASE)
+RE_CIDADE_DATA = re.compile(r"^\s*[\wÀ-ú\.\s]{2,40}/[A-Z]{2},\s*(data do protocolo|\d{1,2}\s+de\s+\w+\s+de\s+\d{4}|data\b).*$", re.IGNORECASE)
+RE_OAB = re.compile(r"OAB", re.IGNORECASE)
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
 
 
-def _set_font(run, size=CORPO, bold=False, italic=False):
+def _font(run, size=CORPO, bold=False, italic=False):
     run.font.name = FONTE
     run.font.size = Pt(size)
     run.bold = bold
     run.italic = italic
     rpr = run._element.get_or_add_rPr()
-    rfonts = rpr.get_or_add_rFonts()
-    rfonts.set(qn("w:ascii"), FONTE)
-    rfonts.set(qn("w:hAnsi"), FONTE)
-    rfonts.set(qn("w:cs"), FONTE)
+    rf = rpr.get_or_add_rFonts()
+    for a in ("w:ascii", "w:hAnsi", "w:cs"):
+        rf.set(qn(a), FONTE)
 
 
 def set_base_style(document):
-    style = document.styles["Normal"]
-    style.font.name = FONTE
-    style.font.size = Pt(CORPO)
-    rpr = style.element.get_or_add_rPr()
-    rfonts = rpr.get_or_add_rFonts()
-    rfonts.set(qn("w:ascii"), FONTE)
-    rfonts.set(qn("w:hAnsi"), FONTE)
-    rfonts.set(qn("w:cs"), FONTE)
-    pf = style.paragraph_format
+    st = document.styles["Normal"]
+    st.font.name = FONTE
+    st.font.size = Pt(CORPO)
+    rf = st.element.get_or_add_rPr().get_or_add_rFonts()
+    for a in ("w:ascii", "w:hAnsi", "w:cs"):
+        rf.set(qn(a), FONTE)
+    pf = st.paragraph_format
     pf.line_spacing = 1.5
     pf.line_spacing_rule = WD_LINE_SPACING.ONE_POINT_FIVE
-    pf.space_after = Pt(0)
     pf.space_before = Pt(0)
-    for section in document.sections:
-        section.page_height = Cm(29.7)
-        section.page_width = Cm(21.0)
-        section.top_margin = Cm(2.5)
-        section.bottom_margin = Cm(2.5)
-        section.left_margin = Cm(3.0)
-        section.right_margin = Cm(2.5)
+    pf.space_after = Pt(0)
+    for s in document.sections:
+        s.page_height, s.page_width = Cm(29.7), Cm(21.0)
+        s.top_margin = s.bottom_margin = s.left_margin = s.right_margin = Cm(2.0)
 
 
-def add_runs_with_bold(paragraph, text, size=CORPO, italic=False):
+def add_bold(paragraph, text, size=CORPO):
     pos = 0
-    any_run = False
     for m in BOLD_RE.finditer(text):
         if m.start() > pos:
-            _set_font(paragraph.add_run(text[pos:m.start()]), size=size, italic=italic)
-            any_run = True
-        _set_font(paragraph.add_run(m.group(1)), size=size, bold=True, italic=italic)
-        any_run = True
+            _font(paragraph.add_run(text[pos:m.start()]), size=size)
+        _font(paragraph.add_run(m.group(1)), size=size, bold=True)
         pos = m.end()
     if pos < len(text):
-        _set_font(paragraph.add_run(text[pos:]), size=size, italic=italic)
-        any_run = True
-    if not any_run:
-        _set_font(paragraph.add_run(""), size=size, italic=italic)
+        _font(paragraph.add_run(text[pos:]), size=size)
 
 
-def is_heading(line):
-    s = line.strip()
+def is_heading(s):
     if s.startswith("#"):
         return True
     letters = [c for c in s if c.isalpha()]
-    if letters and len(s) <= 130:
-        upper = sum(1 for c in letters if c.isupper())
-        if upper / len(letters) >= 0.9 and len(letters) >= 3:
-            return True
-    return False
+    return bool(letters) and len(s) <= 130 and len(letters) >= 3 and \
+        sum(1 for c in letters if c.isupper()) / len(letters) >= 0.9
 
 
-def parse_table_block(lines, i):
+def parse_table(lines, i):
     rows = []
     while i < len(lines) and lines[i].strip().startswith("|"):
-        raw = lines[i].strip().strip("|")
-        cells = [c.strip() for c in raw.split("|")]
-        if not all(set(c) <= set("-: ") for c in cells):  # ignora |---|---|
+        cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+        if not all(set(c) <= set("-: ") for c in cells):
             rows.append(cells)
         i += 1
     return rows, i
 
 
+def next_nonempty(lines, i):
+    j = i + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    return lines[j].strip() if j < len(lines) else ""
+
+
 def main():
     if len(sys.argv) < 3:
-        print("Uso: python3 gerar_docx.py entrada.md saida.docx")
-        sys.exit(1)
+        print("Uso: python3 gerar_docx.py entrada.md saida.docx"); sys.exit(1)
     entrada, saida = sys.argv[1], sys.argv[2]
     with open(entrada, encoding="utf-8") as f:
         lines = f.read().split("\n")
 
-    document = Document()
-    set_base_style(document)
+    doc = Document()
+    set_base_style(doc)
+    pending_blank = False
+    wrote = False
 
     i = 0
     while i < len(lines):
-        line = lines[i]
-        s = line.strip()
+        raw = lines[i]
+        s = raw.strip()
 
         if not s:
+            pending_blank = True
             i += 1
             continue
 
-        # Tabela
         if s.startswith("|"):
-            rows, i = parse_table_block(lines, i)
+            if pending_blank and wrote:
+                doc.add_paragraph()
+            pending_blank = False
+            rows, i = parse_table(lines, i)
             if rows:
                 ncols = max(len(r) for r in rows)
-                table = document.add_table(rows=0, cols=ncols)
-                table.style = "Table Grid"
-                table.alignment = WD_TABLE_ALIGNMENT.CENTER
+                t = doc.add_table(rows=0, cols=ncols)
+                t.style = "Table Grid"
+                t.alignment = WD_TABLE_ALIGNMENT.CENTER
                 for r, cells in enumerate(rows):
                     cells += [""] * (ncols - len(cells))
-                    row_cells = table.add_row().cells
+                    rc = t.add_row().cells
                     for c, val in enumerate(cells):
-                        para = row_cells[c].paragraphs[0]
+                        para = rc[c].paragraphs[0]
                         para.paragraph_format.first_line_indent = Cm(0)
                         para.paragraph_format.line_spacing = 1.0
-                        run = para.add_run(val.replace("**", ""))
-                        _set_font(run, size=11, bold=(r == 0))
+                        _font(para.add_run(val.replace("**", "")), size=11, bold=(r == 0))
+                wrote = True
             continue
 
-        p = document.add_paragraph()
+        if pending_blank and wrote:
+            doc.add_paragraph()
+        pending_blank = False
+
+        p = doc.add_paragraph()
         pf = p.paragraph_format
         text = re.sub(r"^#+\s*", "", s)
+        J, C = WD_ALIGN_PARAGRAPH.JUSTIFY, WD_ALIGN_PARAGRAPH.CENTER
 
-        if TITULO_ACAO.match(text):
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            pf.first_line_indent = Cm(0)
-            pf.space_before = Pt(12); pf.space_after = Pt(12)
-            _set_font(p.add_run(text.replace("**", "")), bold=True)
-        elif is_heading(line):
-            p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-            pf.first_line_indent = Cm(0)
-            pf.space_before = Pt(12); pf.space_after = Pt(6)
-            _set_font(p.add_run(text.replace("**", "")), bold=True)
-        elif s.startswith(">"):  # ementa / citação
-            quote = re.sub(r"^>\s?", "", s)
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-            pf.first_line_indent = Cm(0)
-            pf.left_indent = Cm(4.0)
-            pf.space_before = Pt(6); pf.space_after = Pt(6)
-            add_runs_with_bold(p, quote, size=11, italic=True)
-        elif FECHO.match(text) or "OAB" in s or re.match(r"^[A-ZÁÉÍÓÚÂÊÔÃÕÇ\.\s]+/RS", s):
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            pf.first_line_indent = Cm(0)
-            pf.space_before = Pt(6)
-            add_runs_with_bold(p, text)
-        else:  # corpo
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-            pf.first_line_indent = INDENT
-            add_runs_with_bold(p, text)
+        if RE_ENDERECO.match(s):
+            p.alignment = J; pf.first_line_indent = Cm(0)
+            _font(p.add_run(text.replace("**", "")), bold=True)
+        elif RE_TITULO.match(text):
+            p.alignment = C; pf.first_line_indent = Cm(0)
+            _font(p.add_run(text.replace("**", "")), bold=True)
+        elif RE_CIDADE_DATA.match(s) or RE_OAB.search(s) or (is_heading(s) and RE_OAB.search(next_nonempty(lines, i))):
+            # bloco de assinatura: cidade/data, nome do advogado, OAB
+            p.alignment = C; pf.first_line_indent = Cm(0)
+            _font(p.add_run(text.replace("**", "")), bold=True)
+        elif s.startswith(">"):
+            p.alignment = J; pf.first_line_indent = Cm(0); pf.left_indent = RECUO_EMENTA
+            add_bold(p, re.sub(r"^>\s?", "", s))
+        elif is_heading(s):
+            p.alignment = J; pf.first_line_indent = RECUO
+            _font(p.add_run(text.replace("**", "")), bold=True)
+        else:
+            p.alignment = J; pf.first_line_indent = RECUO
+            add_bold(p, text)
+        wrote = True
         i += 1
 
-    document.save(saida)
+    doc.save(saida)
     print(f"OK: {saida}")
 
 
