@@ -35,11 +35,11 @@ resto da skill lê estes valores.
   para a atendente virtual (ex.: "Helena", "Ana", "Júlia") e preencha aqui; ele
   aparece na abertura e na assinatura das mensagens.
 
-## Links a preencher (⚠️ pendentes)
-Enquanto estiverem vazios, **não** envie a linha correspondente ao lead.
-- **Instagram:** `[INSTAGRAM]` — A PREENCHER
-- **TikTok:** `[TIKTOK]` — A PREENCHER
-- **Link de avaliação (Google/afins):** `[LINK_AVALIACAO]` — A PREENCHER
+## Links oficiais ✅
+- **Instagram:** https://www.instagram.com/advogadorogerbento/
+- **TikTok:** https://www.tiktok.com/@advogadorogerbento
+- **Facebook:** https://www.facebook.com/advogadorogerbento
+- **Link de avaliação (Google):** https://g.page/r/Cd4KXZi07M4AEB0/review
 
 ## Contato / origem
 - **Canal principal:** WhatsApp via Kinbox (`go.kinbox.com.br`).

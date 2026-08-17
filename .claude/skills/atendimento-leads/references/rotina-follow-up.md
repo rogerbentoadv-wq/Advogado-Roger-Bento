@@ -13,20 +13,23 @@ Se seguir sem resposta, faça no máximo mais 1 tentativa algumas horas depois
 ## B) Mensagem pós-agendamento (logo após confirmar)
 Enviada no momento em que o lead confirma a reunião:
 > Ah, e aproveitando, [nome] 😊
-> Vou te deixar aqui também as redes oficiais do Dr. Roger Bento, onde **ele**
-> compartilha dicas, orientações e casos reais sobre Direitos Trabalhistas ⚖️
-> Assim você já pode acompanhar os conteúdos e entender melhor como **ele** atua.
 >
-> 👉 Instagram: [INSTAGRAM]
-> 👉 TikTok: [TIKTOK]
-> 👉 Deixe sua avaliação sobre nosso atendimento: [LINK_AVALIACAO]
+> Vou deixar aqui também as redes oficiais do Dr. Roger Bento, onde **ele**
+> compartilha orientações jurídicas, dicas importantes e conteúdos sobre
+> direitos em diversas áreas ⚖️
 >
-> Vale a pena seguir — muita gente tira dúvidas importantes e entende melhor
-> seus direitos por lá.
+> Assim você pode acompanhar melhor o trabalho **dele** e ficar por dentro de
+> informações que ajudam muitas pessoas no dia a dia.
+>
+> 👉 Instagram: https://www.instagram.com/advogadorogerbento/
+> 👉 TikTok: https://www.tiktok.com/@advogadorogerbento
+> 👉 Facebook: https://www.facebook.com/advogadorogerbento
+>
+> Vale muito a pena acompanhar 😊
+> Muitas pessoas conseguem esclarecer dúvidas importantes e entender melhor
+> seus direitos através dos conteúdos publicados por lá.
 
-> Preencha os links reais em `parametros-operacionais.md`. Enquanto estiverem
-> vazios, **não envie** a linha do link correspondente (não mande placeholder
-> pro lead).
+> Links oficiais registrados em `parametros-operacionais.md`.
 
 ## C) Rotina no DIA da reunião
 
@@ -53,6 +56,24 @@ Escalonamento de confirmação:
 
 > `[link-da-reuniao]` = a URL do Google Meet gerada na criação do evento
 > (ver `fluxo-agendamento.md`).
+
+## D) Pedido de avaliação no Google (após o atendimento)
+Mensagem **separada**, enviada **depois de uma boa experiência** — de preferência
+após a reunião acontecer (ou após um atendimento nota 10). Não envie junto com a
+mensagem das redes (B); é um segundo momento.
+> [nome], posso te pedir um favor? 🙏
+>
+> Seria possível você tirar 1 minuto para nos avaliar no Google? 🤩
+>
+> Esta avaliação é super importante para nós sabermos se estamos no caminho
+> certo e buscarmos cada dia mais um atendimento de excelência para você.
+>
+> Segue o link, é só abrir, clicar em avaliação, escolher a quantidade de
+> estrelas e comentar sobre sua experiência conosco. 👇
+>
+> https://g.page/r/Cd4KXZi07M4AEB0/review
+
+> No Kinbox, `[nome]` corresponde à variável de mescla `{{first_name}}`.
 
 ## Observação sobre automação dos lembteres
 Quando este agente roda **dentro do Kinbox/automação**, os lembretes das 9h e dos
