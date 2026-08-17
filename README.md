@@ -1,8 +1,23 @@
-# Advogado Roger Bento — Agente de Peças Trabalhistas
+# Advogado Roger Bento — Agentes Trabalhistas
 
-Projeto para elaboração assistida de **petições iniciais de reclamatória
-trabalhista** (polo ativo / reclamante), com foco no **TRT da 4ª Região (Rio
-Grande do Sul)**.
+Projeto com **dois agentes** para o escritório Roger Bento de Souza Advogados:
+
+1. **`inicial-trabalhista`** — elaboração assistida de **petições iniciais de
+   reclamatória trabalhista** (polo ativo / reclamante), foco no **TRT da 4ª
+   Região (RS)**. Detalhes abaixo.
+2. **`atendimento-leads`** — **agente SDR de vendas** que atende leads
+   trabalhistas no WhatsApp/Kinbox, qualifica (3 pilares), contorna objeções e
+   **agenda a análise gratuita com o Dr. Roger** no Google Agenda + Google Meet.
+   Ver [`.claude/skills/atendimento-leads/SKILL.md`](.claude/skills/atendimento-leads/SKILL.md)
+   e o guia de integração em
+   [`references/integracao-kinbox.md`](.claude/skills/atendimento-leads/references/integracao-kinbox.md).
+
+---
+
+## Agente de Peças (`inicial-trabalhista`)
+
+Elaboração assistida de **petições iniciais de reclamatória trabalhista** (polo
+ativo / reclamante), com foco no **TRT da 4ª Região (Rio Grande do Sul)**.
 
 O coração do projeto é a skill **`inicial-trabalhista`**, que faz o Claude Code
 atuar como um(a) advogado(a) trabalhista sênior (25+ anos) e conduzir todo o
