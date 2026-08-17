@@ -136,12 +136,22 @@ Toda peça é entregue como **arquivo `.docx` editável**, nunca apenas como tex
 no chat. Procedimento:
 
 1. Escreva a peça completa em Markdown num arquivo (ex.: no diretório de
-   scratchpad da sessão): títulos de tópico em CAIXA ALTA, `**negrito**` onde
-   necessário, e o rol/valores de pedidos como **tabela Markdown** (`| ... |`).
-2. Converta para `.docx` rodando:
+   scratchpad da sessão), usando estas convenções para o conversor formatar
+   certo:
+   - títulos de tópico em CAIXA ALTA (ex.: `I – DA JUSTIÇA GRATUITA`);
+   - `**negrito**` para ênfase (art., súmula-chave);
+   - **ementas/citações** de jurisprudência começando a linha com `> ` (viram
+     bloco recuado em itálico);
+   - rol/valores de pedidos como **tabela Markdown** (`| ... |`);
+   - a linha `RECLAMAÇÃO TRABALHISTA` sozinha (centralizada automaticamente).
+2. **Gere o `.docx` SOMENTE pelo conversor** (nunca de outra forma):
    `python3 scripts/gerar_docx.py <peca>.md <peca>.docx`
-   (o script aplica Times New Roman 12, justificado, espaçamento 1,5, títulos em
-   negrito, tabelas do Word; instala o python-docx sozinho se faltar).
+   Ele aplica o padrão forense uniforme: Times New Roman 12, **justificado**,
+   espaçamento 1,5, **recuo de 1ª linha de 1,25 cm**, margens (esq. 3 cm),
+   tópicos em negrito, título e assinatura centralizados, ementas recuadas,
+   tabelas do Word (autoinstala o python-docx se faltar). **Nunca** entregue um
+   `.docx` com marcações de markdown visíveis (`**`, `#`, `|`) — se aparecerem,
+   a peça não passou pelo conversor; refaça.
 3. **Entregue o arquivo ao usuário** com a ferramenta de envio de arquivos
    (SendUserFile), nomeando-o pelo cliente (ex.: `FULANO DE TAL - RECLAMAÇÃO.docx`).
 4. **Arquive o `.docx` na pasta do cliente no Google Drive** (a pasta

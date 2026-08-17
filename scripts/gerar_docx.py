@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
-Gera uma petição .docx EDITÁVEL a partir de um arquivo Markdown.
+Gera uma petição .docx EDITÁVEL e PADRONIZADA a partir de um arquivo Markdown.
 
 Uso:
     python3 scripts/gerar_docx.py entrada.md saida.docx
 
-Formatação (padrão forense do escritório):
-- A4, margens ~2,5 cm
-- Times New Roman 12, texto justificado, espaçamento 1,5
-- Títulos (linhas iniciadas por # ou totalmente em CAIXA ALTA): negrito
-- **negrito** inline suportado
-- Tabelas em Markdown (| ... |) viram tabelas do Word (grade)
-- Bloco de assinatura (linha com "OAB") centralizado
+Padrão forense aplicado (uniforme em toda a peça):
+- A4, margens: esquerda 3 cm, direita/superior/inferior 2,5 cm
+- Corpo: Times New Roman 12, JUSTIFICADO, espaçamento 1,5, recuo de 1ª linha 1,25 cm
+- Títulos de tópico (linhas iniciadas por # ou em CAIXA ALTA): negrito, à esquerda,
+  sem recuo, com espaço antes/depois
+- "RECLAMAÇÃO TRABALHISTA" (e variantes) e o fecho/assinatura: centralizados
+- Ementas/citações (linhas iniciadas por ">"): recuadas, itálico, corpo 11
+- **negrito** inline suportado; tabelas Markdown viram tabelas do Word
+- Nenhuma marcação de markdown deve sobrar visível no resultado
 
 Se o python-docx não estiver instalado, o script tenta instalá-lo.
 """
@@ -25,67 +27,89 @@ except ImportError:
 
 from docx import Document
 from docx.shared import Pt, Cm
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
+
+FONTE = "Times New Roman"
+CORPO = 12
+INDENT = Cm(1.25)
+
+TITULO_ACAO = re.compile(r"^\s*RECLAMA(ÇÃO|CAO)\s+TRABALHISTA\s*$", re.IGNORECASE)
+FECHO = re.compile(r"^\s*(nestes|termos em que)[,]?\s+.*pede deferimento\.?\s*$", re.IGNORECASE)
+BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
+
+
+def _set_font(run, size=CORPO, bold=False, italic=False):
+    run.font.name = FONTE
+    run.font.size = Pt(size)
+    run.bold = bold
+    run.italic = italic
+    rpr = run._element.get_or_add_rPr()
+    rfonts = rpr.get_or_add_rFonts()
+    rfonts.set(qn("w:ascii"), FONTE)
+    rfonts.set(qn("w:hAnsi"), FONTE)
+    rfonts.set(qn("w:cs"), FONTE)
 
 
 def set_base_style(document):
     style = document.styles["Normal"]
-    style.font.name = "Times New Roman"
-    style.font.size = Pt(12)
-    # garante a fonte também para caracteres especiais
+    style.font.name = FONTE
+    style.font.size = Pt(CORPO)
     rpr = style.element.get_or_add_rPr()
     rfonts = rpr.get_or_add_rFonts()
-    rfonts.set(qn("w:ascii"), "Times New Roman")
-    rfonts.set(qn("w:hAnsi"), "Times New Roman")
+    rfonts.set(qn("w:ascii"), FONTE)
+    rfonts.set(qn("w:hAnsi"), FONTE)
+    rfonts.set(qn("w:cs"), FONTE)
     pf = style.paragraph_format
     pf.line_spacing = 1.5
-    pf.space_after = Pt(6)
+    pf.line_spacing_rule = WD_LINE_SPACING.ONE_POINT_FIVE
+    pf.space_after = Pt(0)
+    pf.space_before = Pt(0)
     for section in document.sections:
         section.page_height = Cm(29.7)
         section.page_width = Cm(21.0)
-        section.top_margin = section.bottom_margin = Cm(2.5)
-        section.left_margin = section.right_margin = Cm(2.5)
+        section.top_margin = Cm(2.5)
+        section.bottom_margin = Cm(2.5)
+        section.left_margin = Cm(3.0)
+        section.right_margin = Cm(2.5)
 
 
-BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
-
-
-def add_runs_with_bold(paragraph, text):
-    """Adiciona texto a um parágrafo interpretando **negrito**."""
+def add_runs_with_bold(paragraph, text, size=CORPO, italic=False):
     pos = 0
+    any_run = False
     for m in BOLD_RE.finditer(text):
         if m.start() > pos:
-            paragraph.add_run(text[pos:m.start()])
-        run = paragraph.add_run(m.group(1))
-        run.bold = True
+            _set_font(paragraph.add_run(text[pos:m.start()]), size=size, italic=italic)
+            any_run = True
+        _set_font(paragraph.add_run(m.group(1)), size=size, bold=True, italic=italic)
+        any_run = True
         pos = m.end()
     if pos < len(text):
-        paragraph.add_run(text[pos:])
+        _set_font(paragraph.add_run(text[pos:]), size=size, italic=italic)
+        any_run = True
+    if not any_run:
+        _set_font(paragraph.add_run(""), size=size, italic=italic)
 
 
 def is_heading(line):
-    stripped = line.strip()
-    if stripped.startswith("#"):
+    s = line.strip()
+    if s.startswith("#"):
         return True
-    letters = [c for c in stripped if c.isalpha()]
-    # linha curta e majoritariamente em maiúsculas = título de tópico
-    if letters and len(stripped) <= 120:
+    letters = [c for c in s if c.isalpha()]
+    if letters and len(s) <= 130:
         upper = sum(1 for c in letters if c.isupper())
-        if upper / len(letters) >= 0.85 and len(letters) >= 3:
+        if upper / len(letters) >= 0.9 and len(letters) >= 3:
             return True
     return False
 
 
 def parse_table_block(lines, i):
-    """Lê um bloco de tabela Markdown começando em lines[i]. Retorna (linhas_da_tabela, prox_i)."""
     rows = []
     while i < len(lines) and lines[i].strip().startswith("|"):
         raw = lines[i].strip().strip("|")
         cells = [c.strip() for c in raw.split("|")]
-        # ignora a linha separadora |---|---|
-        if not all(set(c) <= set("-: ") for c in cells):
+        if not all(set(c) <= set("-: ") for c in cells):  # ignora |---|---|
             rows.append(cells)
         i += 1
     return rows, i
@@ -105,14 +129,14 @@ def main():
     i = 0
     while i < len(lines):
         line = lines[i]
-        stripped = line.strip()
+        s = line.strip()
 
-        if not stripped:
+        if not s:
             i += 1
             continue
 
-        # tabela
-        if stripped.startswith("|"):
+        # Tabela
+        if s.startswith("|"):
             rows, i = parse_table_block(lines, i)
             if rows:
                 ncols = max(len(r) for r in rows)
@@ -123,24 +147,42 @@ def main():
                     cells += [""] * (ncols - len(cells))
                     row_cells = table.add_row().cells
                     for c, val in enumerate(cells):
-                        row_cells[c].paragraphs[0].text = ""
-                        run = row_cells[c].paragraphs[0].add_run(val.replace("**", ""))
-                        if r == 0:
-                            run.bold = True
+                        para = row_cells[c].paragraphs[0]
+                        para.paragraph_format.first_line_indent = Cm(0)
+                        para.paragraph_format.line_spacing = 1.0
+                        run = para.add_run(val.replace("**", ""))
+                        _set_font(run, size=11, bold=(r == 0))
             continue
 
         p = document.add_paragraph()
-        text = re.sub(r"^#+\s*", "", stripped)
+        pf = p.paragraph_format
+        text = re.sub(r"^#+\s*", "", s)
 
-        if is_heading(line):
-            p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-            run = p.add_run(text.replace("**", ""))
-            run.bold = True
-        elif "OAB" in stripped or stripped.lower() == "termos em que, pede deferimento." or stripped.lower() == "nestes termos, pede deferimento.":
+        if TITULO_ACAO.match(text):
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            add_runs_with_bold(p, text)
-        else:
+            pf.first_line_indent = Cm(0)
+            pf.space_before = Pt(12); pf.space_after = Pt(12)
+            _set_font(p.add_run(text.replace("**", "")), bold=True)
+        elif is_heading(line):
+            p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            pf.first_line_indent = Cm(0)
+            pf.space_before = Pt(12); pf.space_after = Pt(6)
+            _set_font(p.add_run(text.replace("**", "")), bold=True)
+        elif s.startswith(">"):  # ementa / citação
+            quote = re.sub(r"^>\s?", "", s)
             p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            pf.first_line_indent = Cm(0)
+            pf.left_indent = Cm(4.0)
+            pf.space_before = Pt(6); pf.space_after = Pt(6)
+            add_runs_with_bold(p, quote, size=11, italic=True)
+        elif FECHO.match(text) or "OAB" in s or re.match(r"^[A-ZÁÉÍÓÚÂÊÔÃÕÇ\.\s]+/RS", s):
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            pf.first_line_indent = Cm(0)
+            pf.space_before = Pt(6)
+            add_runs_with_bold(p, text)
+        else:  # corpo
+            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            pf.first_line_indent = INDENT
             add_runs_with_bold(p, text)
         i += 1
 
