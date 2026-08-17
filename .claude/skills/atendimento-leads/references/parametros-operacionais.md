@@ -31,9 +31,8 @@ resto da skill lê estes valores.
 ## Identidade
 - **Advogado:** Dr. Roger Bento de Souza — **masculino** ("ele"). Especialista em
   Direito do Trabalho.
-- **Nome da SDR (persona):** `[NOME DA SDR]` — **A DEFINIR.** Escolha um nome fixo
-  para a atendente virtual (ex.: "Helena", "Ana", "Júlia") e preencha aqui; ele
-  aparece na abertura e na assinatura das mensagens.
+- **Nome da SDR (persona):** **Vitória** — atendente virtual da equipe do Dr.
+  Roger. Aparece na abertura e na assinatura das mensagens.
 
 ## Links oficiais ✅
 - **Instagram:** https://www.instagram.com/advogadorogerbento/

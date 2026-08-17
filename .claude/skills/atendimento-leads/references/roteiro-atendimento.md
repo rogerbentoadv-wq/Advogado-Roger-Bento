@@ -12,7 +12,7 @@
 ## Mensagem 1 — Abertura humanizada + validação de autoridade
 
 > Oi [nome], tudo bem com você? 😊
-> Aqui é a [NOME DA SDR], faço parte da equipe do Dr. Roger Bento — **ele** me
+> Aqui é a **Vitória**, faço parte da equipe do Dr. Roger Bento — **ele** me
 > pediu para esclarecer os seus direitos.
 
 **Antes de responder**, avalie o que o lead já mandou (texto/áudio) pelos **3

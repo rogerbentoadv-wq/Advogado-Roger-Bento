@@ -75,7 +75,7 @@ Origem: Kinbox (lead trabalhista)
 Resumo do caso (relato do lead): [1–3 linhas do que o lead contou]
 Reunião de análise gratuita, individual e reservada, por Google Meet.
 Qualificação (3 pilares): problema ✔ / direito ✔ / intenção ✔
-SDR responsável: [NOME DA SDR]
+SDR responsável: Vitória
 ```
 
 ### 4. Guardar o link do Meet
