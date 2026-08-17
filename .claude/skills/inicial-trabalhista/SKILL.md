@@ -156,6 +156,10 @@ no chat. Procedimento:
    python-docx se faltar). **Nunca** entregue um `.docx` com marcações de
    markdown visíveis (`**`, `#`, `|`) — se aparecerem, a peça não passou pelo
    conversor; refaça.
+   O conversor aplica automaticamente o **papel timbrado do escritório** —
+   logo no cabeçalho (`assets/logo-cabecalho.png`) e barra de contato no rodapé
+   (`assets/rodape.png`) — em todas as páginas. Há um modelo-referência fictício
+   em `modelos/MODELO-INICIAL-REFERENCIA.md` (e `.docx`) para consulta do padrão.
 3. **Entregue o arquivo ao usuário** com a ferramenta de envio de arquivos
    (SendUserFile), nomeando-o pelo cliente (ex.: `FULANO DE TAL - RECLAMAÇÃO.docx`).
 4. **Arquive o `.docx` na pasta do cliente no Google Drive** (a pasta

@@ -19,7 +19,7 @@ Padrão aplicado:
 
 Instala o python-docx automaticamente se faltar.
 """
-import sys, re, subprocess
+import sys, os, re, subprocess
 
 try:
     import docx
@@ -36,6 +36,31 @@ from docx.oxml.ns import qn
 FONTE, CORPO = "Times New Roman", 12
 RECUO = Cm(1.5)
 RECUO_EMENTA = Cm(4.0)
+
+# Papel timbrado do escritório (logo no cabeçalho + barra de contato no rodapé).
+# Procurado em assets/ na raiz do projeto (um nível acima de scripts/).
+_ASSETS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets")
+LOGO = os.path.join(_ASSETS, "logo-cabecalho.png")   # 5,97 x 3,49 cm
+RODAPE = os.path.join(_ASSETS, "rodape.png")          # 17,0 x 2,64 cm
+
+
+def add_papel_timbrado(document):
+    """Adiciona logo (cabeçalho) e barra de contato (rodapé), se os arquivos existirem."""
+    sec = document.sections[0]
+    sec.header_distance = Cm(1.0)
+    sec.footer_distance = Cm(1.0)
+    if os.path.exists(LOGO):
+        hp = sec.header.paragraphs[0]
+        hp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        hp.paragraph_format.first_line_indent = Cm(0)
+        hp.add_run().add_picture(LOGO, width=Cm(5.97))
+        sec.header.is_linked_to_previous = False
+    if os.path.exists(RODAPE):
+        fp = sec.footer.paragraphs[0]
+        fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        fp.paragraph_format.first_line_indent = Cm(0)
+        fp.add_run().add_picture(RODAPE, width=Cm(17.0))
+        sec.footer.is_linked_to_previous = False
 
 RE_ENDERECO = re.compile(r"^\s*(EXCELENT[IÍ]SSIM|EXM|AO JU[IÍ]ZO|MERIT[IÍ]SSIM)", re.IGNORECASE)
 RE_TITULO = re.compile(r"^\s*RECLAMA(ÇÃO|CAO)\s+TRABALHISTA\s*$", re.IGNORECASE)
@@ -117,6 +142,7 @@ def main():
 
     doc = Document()
     set_base_style(doc)
+    add_papel_timbrado(doc)
     pending_blank = False
     wrote = False
 
