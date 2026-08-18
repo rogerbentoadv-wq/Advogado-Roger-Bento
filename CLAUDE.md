@@ -39,7 +39,9 @@ A4, margens 2 cm; Times New Roman 12; justificado; entrelinha 1,5; recuo de 1ª
 linha de 1,5 cm no corpo e nos títulos (títulos de tópico em negrito);
 endereçamento em negrito; "RECLAMAÇÃO TRABALHISTA" e a assinatura (cidade/data,
 nome, OAB) centralizados em negrito; ementas com recuo à esquerda de 4 cm;
-separação de blocos por linha em branco. Ver `modelos/MODELO-INICIAL-REFERENCIA`.
+listas de itens com marcador (recuo 1,27 cm, deslocamento 0,635 cm) e listas
+numeradas nos requerimentos finais; separação de blocos por linha em branco.
+Ver `modelos/MODELO-INICIAL-REFERENCIA`.
 
 ## Jurisprudência (INEGOCIÁVEL)
 

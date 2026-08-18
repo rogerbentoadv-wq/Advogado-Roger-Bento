@@ -1,6 +1,5 @@
 AO JUÍZO DA ___ª VARA DO TRABALHO DE TAQUARA/RS
 
-
 JACKSON EVANDRO STREIT, brasileiro, solteiro, trabalhador polivalente em injeção de EVA, nascido em 16/08/1988, inscrito no CPF sob o nº 018.063.980-36, portador do documento de identidade nº 1086077664 SSP/RS, residente e domiciliado na Rua B, nº 42, bairro Alexandria, Parobé/RS, CEP 95630-000, e-mail jacksonestreit1@gmail.com, telefone [CONFERIR: (51) 98028-5214], por seu advogado, vem, respeitosamente, à presença de Vossa Excelência, com fundamento nos artigos 7º da Constituição Federal, 4º, 8º, 9º, 58, 59, 71, 73, 74, 223-B e seguintes, 457, 818 e 840 da CLT, propor a presente
 
 RECLAMAÇÃO TRABALHISTA
@@ -31,23 +30,15 @@ O Reclamante foi admitido pela Reclamada em 02/10/2024, para exercer atividades 
 
 A CTPS Digital comprova os seguintes dados:
 
-admissão: 02/10/2024;
-
-término do contrato: 22/09/2025;
-
-projeção do aviso-prévio indenizado: 25/10/2025;
-
-cargo: trabalhador polivalente injeção de EVA;
-
-código CBO do cargo: 8117-70;
-
-salário inicial: R$ 9,94 por hora;
-
-salário a partir de 01/05/2025: R$ 11,94 por hora;
-
-contrato inicialmente registrado por prazo determinado, com término previsto para 31/10/2024, anotado como contrato por prazo indeterminado a partir de 01/05/2025;
-
-férias registradas no período de 19/12/2024 a 05/01/2025 [CONFERIR: gozo e pagamento integral das férias — o registro indica apenas 18 dias].
+- admissão: 02/10/2024;
+- término do contrato: 22/09/2025;
+- projeção do aviso-prévio indenizado: 25/10/2025;
+- cargo: trabalhador polivalente injeção de EVA;
+- código CBO do cargo: 8117-70;
+- salário inicial: R$ 9,94 por hora;
+- salário a partir de 01/05/2025: R$ 11,94 por hora;
+- contrato inicialmente registrado por prazo determinado, com término previsto para 31/10/2024, anotado como contrato por prazo indeterminado a partir de 01/05/2025;
+- férias registradas no período de 19/12/2024 a 05/01/2025 [CONFERIR: gozo e pagamento integral das férias — o registro indica apenas 18 dias].
 
 Ainda que o registro inicial tenha se dado sob a forma de contrato por prazo determinado, com término previsto para 31/10/2024, a prestação de serviços prosseguiu sem qualquer interrupção até 22/09/2025, de modo que o contrato passou a vigorar por prazo indeterminado, nos termos dos artigos 445 e 451 da CLT.
 
@@ -65,25 +56,19 @@ A atividade econômica da Reclamada está relacionada à fabricação e utiliza�
 
 As convenções coletivas registradas no Ministério do Trabalho abrangem expressamente o município de Parobé/RS e vigoraram durante todo o contrato de trabalho do Reclamante, iniciado em 02/10/2024 e encerrado em 22/09/2025, com projeção do aviso-prévio até 25/10/2025:
 
-CCT 2024/2025 – registro MTE nº RS003113/2024;
-
-CCT 2025/2027 – registro MTE nº RS003775/2025.
+- CCT 2024/2025 – registro MTE nº RS003113/2024;
+- CCT 2025/2027 – registro MTE nº RS003775/2025.
 
 [CONFERIR: números de registro no MTE e vigência das CCTs 2024/2025 e 2025/2027 aplicáveis ao período contratual do Reclamante.]
 
 Os instrumentos coletivos asseguram, dentre outros direitos:
 
-adicional de 60% sobre as horas extraordinárias;
-
-pagamento em dobro dos domingos e feriados não compensados;
-
-adicional noturno também sobre o período prorrogado após as 5h;
-
-correta anotação da função na CTPS;
-
-fornecimento do Perfil Profissiográfico Previdenciário;
-
-proibição de práticas gerenciais capazes de causar humilhação ou discriminação.
+- adicional de 60% sobre as horas extraordinárias;
+- pagamento em dobro dos domingos e feriados não compensados;
+- adicional noturno também sobre o período prorrogado após as 5h;
+- correta anotação da função na CTPS;
+- fornecimento do Perfil Profissiográfico Previdenciário;
+- proibição de práticas gerenciais capazes de causar humilhação ou discriminação.
 
 Requer-se a aplicação das referidas normas coletivas durante os respectivos períodos de vigência.
 
@@ -99,37 +84,25 @@ As horas constantes do controle paralelo eram pagas separadamente, inclusive em 
 
 Além da jornada registrada, o Reclamante:
 
-precisava chegar aproximadamente dez minutos antes para iniciar a preparação da máquina;
-
-trabalhava no intervalo para atender às necessidades da produção;
-
-participava de períodos de “serão”, com antecipação e prorrogação do turno;
-
-laborava em domingos, com pagamento realizado fora da folha.
+- precisava chegar aproximadamente dez minutos antes para iniciar a preparação da máquina;
+- trabalhava no intervalo para atender às necessidades da produção;
+- participava de períodos de “serão”, com antecipação e prorrogação do turno;
+- laborava em domingos, com pagamento realizado fora da folha.
 
 O artigo 74, § 2º, da CLT impõe ao empregador a obrigação de manter controle fidedigno da jornada. A não apresentação dos registros ou a apresentação de controles incompletos gera presunção favorável à jornada descrita pelo trabalhador, conforme a Súmula nº 338 do TST, cujos itens I e III igualmente invalidam, como prova, os cartões que registrem horários uniformes.
 
 Requer-se que a Reclamada seja intimada a apresentar:
 
-todos os cartões de ponto oficiais;
-
-arquivos e registros do controle digital paralelo;
-
-logs de acesso, relatórios, espelhos e históricos de alterações;
-
-escalas de trabalho e de domingos;
-
-demonstrativos do banco de horas;
-
-comprovantes dos pagamentos feitos em dinheiro;
-
-recibos salariais;
-
-fichas financeiras;
-
-eventos do eSocial relacionados à remuneração e pagamentos;
-
-comprovantes de recolhimento do FGTS.
+- todos os cartões de ponto oficiais;
+- arquivos e registros do controle digital paralelo;
+- logs de acesso, relatórios, espelhos e históricos de alterações;
+- escalas de trabalho e de domingos;
+- demonstrativos do banco de horas;
+- comprovantes dos pagamentos feitos em dinheiro;
+- recibos salariais;
+- fichas financeiras;
+- eventos do eSocial relacionados à remuneração e pagamentos;
+- comprovantes de recolhimento do FGTS.
 
 A ausência injustificada desses documentos deverá produzir os efeitos dos artigos 396 a 400 do CPC e da Súmula nº 338 do TST.
 
@@ -153,17 +126,12 @@ Parte dessas horas era lançada apenas no controle paralelo, sem registro no pon
 
 A própria jornada formal das 19h30 às 5h30 deve ser analisada considerando:
 
-os limites de oito horas diárias e 44 horas semanais;
-
-o intervalo efetivamente usufruído;
-
-a redução da hora noturna para 52 minutos e 30 segundos;
-
-a antecipação e a prorrogação do turno;
-
-a validade ou invalidade de eventual regime de compensação;
-
-os períodos efetivamente lançados no sistema paralelo.
+- os limites de oito horas diárias e 44 horas semanais;
+- o intervalo efetivamente usufruído;
+- a redução da hora noturna para 52 minutos e 30 segundos;
+- a antecipação e a prorrogação do turno;
+- a validade ou invalidade de eventual regime de compensação;
+- os períodos efetivamente lançados no sistema paralelo.
 
 As convenções coletivas estabelecem adicional de 60% para as horas extraordinárias.
 
@@ -171,17 +139,12 @@ O pagamento informal de algumas horas não afasta o direito às diferenças, poi
 
 Requer-se o pagamento de todas as horas excedentes da 8ª diária e 44ª semanal, sem cumulação, com:
 
-adicional normativo de 60%;
-
-adicional de 100% nos domingos e feriados não compensados;
-
-observância da hora noturna reduzida;
-
-adicional noturno nas horas prestadas em período noturno e prorrogado;
-
-inclusão do adicional de insalubridade pago habitualmente na base de cálculo;
-
-dedução somente dos valores comprovadamente pagos sob o mesmo título.
+- adicional normativo de 60%;
+- adicional de 100% nos domingos e feriados não compensados;
+- observância da hora noturna reduzida;
+- adicional noturno nas horas prestadas em período noturno e prorrogado;
+- inclusão do adicional de insalubridade pago habitualmente na base de cálculo;
+- dedução somente dos valores comprovadamente pagos sob o mesmo título.
 
 Em razão da habitualidade, requer reflexos em repousos semanais remunerados, férias com 1/3, décimos terceiros salários, aviso-prévio, FGTS e indenização de 40%.
 
@@ -191,17 +154,12 @@ VIII – DA INVALIDADE DO EVENTUAL BANCO DE HORAS
 
 As convenções coletivas admitem regime especial de compensação em razão da sazonalidade da atividade, mas estabelecem critérios específicos, incluindo:
 
-limite de horas semanais;
-
-contabilização dos créditos e débitos;
-
-período anual de apuração;
-
-pagamento do saldo positivo;
-
-absorção do saldo negativo em determinadas situações;
-
-impossibilidade de utilização de domingos e feriados.
+- limite de horas semanais;
+- contabilização dos créditos e débitos;
+- período anual de apuração;
+- pagamento do saldo positivo;
+- absorção do saldo negativo em determinadas situações;
+- impossibilidade de utilização de domingos e feriados.
 
 A mera existência de autorização coletiva não torna válido qualquer sistema utilizado pela empresa.
 
@@ -223,19 +181,13 @@ As CCTs estabelecem adicional de 100% para os domingos e feriados não compensad
 
 Embora determinados valores fossem entregues ao Reclamante, a Reclamada deverá demonstrar:
 
-quais domingos foram trabalhados;
-
-se houve folga compensatória na semana anterior ou posterior;
-
-a quantidade de horas efetivamente paga;
-
-o valor da hora utilizado;
-
-a aplicação do adicional de 100%;
-
-o adicional noturno e a hora noturna reduzida;
-
-a inclusão das parcelas na folha e no FGTS.
+- quais domingos foram trabalhados;
+- se houve folga compensatória na semana anterior ou posterior;
+- a quantidade de horas efetivamente paga;
+- o valor da hora utilizado;
+- a aplicação do adicional de 100%;
+- o adicional noturno e a hora noturna reduzida;
+- a inclusão das parcelas na folha e no FGTS.
 
 Requer-se o pagamento das diferenças relativas aos domingos, com adicional de 100%, bem como a integração dos valores pagos fora da folha em férias com 1/3, décimos terceiros salários, aviso-prévio, FGTS e indenização de 40%.
 
@@ -247,27 +199,20 @@ O Reclamante cumpria jornada predominantemente noturna, trabalhando das 19h30 à
 
 O artigo 73 da CLT assegura:
 
-adicional noturno mínimo de 20%;
-
-cômputo da hora noturna como 52 minutos e 30 segundos;
-
-aplicação das regras noturnas aos horários mistos e às prorrogações.
+- adicional noturno mínimo de 20%;
+- cômputo da hora noturna como 52 minutos e 30 segundos;
+- aplicação das regras noturnas aos horários mistos e às prorrogações.
 
 As normas coletivas aplicáveis reforçam que o adicional noturno deve ser estendido às horas trabalhadas após as 5h.
 
 O Reclamante recebia adicional noturno sobre parte da jornada registrada. Contudo, não houve pagamento correto sobre:
 
-os períodos registrados apenas no controle paralelo;
-
-as horas extraordinárias noturnas;
-
-o trabalho aos domingos pago fora da folha;
-
-a prorrogação após as 5h;
-
-os minutos anteriores ou posteriores inseridos no período noturno;
-
-eventuais diferenças decorrentes da hora noturna reduzida.
+- os períodos registrados apenas no controle paralelo;
+- as horas extraordinárias noturnas;
+- o trabalho aos domingos pago fora da folha;
+- a prorrogação após as 5h;
+- os minutos anteriores ou posteriores inseridos no período noturno;
+- eventuais diferenças decorrentes da hora noturna reduzida.
 
 Requer-se o pagamento das diferenças do adicional noturno, com observância da redução ficta da hora noturna e da prorrogação após as 5h, além dos reflexos em repousos semanais remunerados, férias com 1/3, décimos terceiros salários, aviso-prévio, FGTS e indenização de 40%.
 
@@ -311,19 +256,13 @@ A CCT aplicável determina a entrega do Perfil Profissiográfico Previdenciário
 
 As atividades do Reclamante envolviam contato com:
 
-calor proveniente das máquinas e moldes;
-
-desmoldantes;
-
-óleos e graxas;
-
-produtos desengraxantes;
-
-resíduos industriais;
-
-matrizes pesadas;
-
-máquinas injetoras de EVA.
+- calor proveniente das máquinas e moldes;
+- desmoldantes;
+- óleos e graxas;
+- produtos desengraxantes;
+- resíduos industriais;
+- matrizes pesadas;
+- máquinas injetoras de EVA.
 
 A Reclamada deverá fornecer PPP completo, atualizado e coerente com o PGR, LTCAT e demais documentos ambientais, contemplando os agentes efetivamente presentes no ambiente de trabalho.
 
@@ -438,15 +377,11 @@ XX – DOS REQUERIMENTOS FINAIS
 
 Requer:
 
-A notificação da Reclamada para apresentar defesa, sob pena de revelia e confissão;
-
-A procedência dos pedidos;
-
-A produção de prova documental, testemunhal, pericial, depoimento pessoal do representante da Reclamada e exibição dos documentos indicados;
-
-A autorização para posterior apresentação de cálculos detalhados, após a juntada dos controles e recibos mantidos pela empregadora;
-
-Que as intimações sejam realizadas em nome do advogado constituído.
+1. A notificação da Reclamada para apresentar defesa, sob pena de revelia e confissão;
+2. A procedência dos pedidos;
+3. A produção de prova documental, testemunhal, pericial, depoimento pessoal do representante da Reclamada e exibição dos documentos indicados;
+4. A autorização para posterior apresentação de cálculos detalhados, após a juntada dos controles e recibos mantidos pela empregadora;
+5. Que as intimações sejam realizadas em nome do advogado constituído.
 
 Termos em que, pede deferimento.
 

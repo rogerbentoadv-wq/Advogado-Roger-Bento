@@ -13,6 +13,8 @@ Padrão aplicado:
 - Endereçamento (EXCELENTÍSSIMO/AO JUÍZO...): negrito, justificado, sem recuo
 - "RECLAMAÇÃO TRABALHISTA" (linha isolada): centralizado, negrito
 - Ementas/citações (linhas iniciadas por ">"): recuo à esquerda de 4 cm
+- Listas: "- item" vira marcador (bullet Symbol) e "1. item" vira lista numerada,
+  com recuo de 1,27 cm e deslocamento de 0,635 cm, como no modelo do escritório
 - Cidade/data, nome do advogado e OAB: centralizados em negrito
 - Separação entre blocos por linha em branco (preservada como parágrafo vazio)
 - **negrito** inline; tabelas Markdown viram tabelas do Word
@@ -31,11 +33,14 @@ from docx import Document
 from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 FONTE, CORPO = "Times New Roman", 12
 RECUO = Cm(1.5)
 RECUO_EMENTA = Cm(4.0)
+# Listas: mesmos valores do modelo real do escritório (720 e 360 twips)
+LISTA_ESQ, LISTA_DESLOC = 720, 360
 
 # Papel timbrado do escritório (logo no cabeçalho + barra de contato no rodapé).
 # Procurado em assets/ na raiz do projeto (um nível acima de scripts/).
@@ -67,6 +72,9 @@ RE_TITULO = re.compile(r"^\s*RECLAMA(ÇÃO|CAO)\s+TRABALHISTA\s*$", re.IGNORECAS
 RE_CIDADE_DATA = re.compile(r"^\s*[\wÀ-ú\.\s]{2,40}/[A-Z]{2},\s*(data do protocolo|\d{1,2}\s+de\s+\w+\s+de\s+\d{4}|data\b).*$", re.IGNORECASE)
 RE_OAB = re.compile(r"OAB", re.IGNORECASE)
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
+# itens de lista: "- item" (marcador) e "1. item" (numerada)
+RE_ITEM_MARCADOR = re.compile(r"^\s*[-*\u2022]\s+(.*)$")
+RE_ITEM_NUMERADO = re.compile(r"^\s*\d+[.)]\s+(.*)$")
 
 
 def _font(run, size=CORPO, bold=False, italic=False):
@@ -95,6 +103,60 @@ def set_base_style(document):
     for s in document.sections:
         s.page_height, s.page_width = Cm(29.7), Cm(21.0)
         s.top_margin = s.bottom_margin = s.left_margin = s.right_margin = Cm(2.0)
+
+
+def _el(tag, **attrs):
+    e = OxmlElement(tag)
+    for k, v in attrs.items():
+        e.set(qn("w:" + k), str(v))
+    return e
+
+
+def nova_lista(document, formato="bullet"):
+    """Cria uma definição de lista nova (marcador ou numerada) e devolve o numId.
+
+    Cada bloco recebe a sua própria definição para que as listas numeradas
+    recomecem em 1, como nas peças do escritório.
+    """
+    numbering = document.part.numbering_part.element
+    usados_abs = [int(a.get(qn("w:abstractNumId")))
+                  for a in numbering.findall(qn("w:abstractNum"))]
+    usados_num = [int(n.get(qn("w:numId")))
+                  for n in numbering.findall(qn("w:num"))]
+    abs_id = max(usados_abs, default=-1) + 1
+    num_id = max(usados_num, default=0) + 1
+
+    abstract = _el("w:abstractNum", abstractNumId=abs_id)
+    abstract.append(_el("w:multiLevelType", val="hybridMultilevel"))
+    lvl = _el("w:lvl", ilvl=0)
+    lvl.append(_el("w:start", val=1))
+    lvl.append(_el("w:numFmt", val="bullet" if formato == "bullet" else "decimal"))
+    lvl.append(_el("w:lvlText", val="" if formato == "bullet" else "%1."))
+    lvl.append(_el("w:lvlJc", val="left"))
+    ppr = OxmlElement("w:pPr")
+    ppr.append(_el("w:ind", left=LISTA_ESQ, hanging=LISTA_DESLOC))
+    lvl.append(ppr)
+    if formato == "bullet":
+        rpr = OxmlElement("w:rPr")
+        rpr.append(_el("w:rFonts", ascii="Symbol", hAnsi="Symbol", hint="default"))
+        lvl.append(rpr)
+    abstract.append(lvl)
+
+    ultimo_abs = numbering.findall(qn("w:abstractNum"))[-1]
+    ultimo_abs.addnext(abstract)
+
+    num = _el("w:num", numId=num_id)
+    num.append(_el("w:abstractNumId", val=abs_id))
+    numbering.append(num)
+    return num_id
+
+
+def aplica_lista(paragraph, num_id):
+    """Vincula o parágrafo à definição de lista (marcador/numeração)."""
+    numPr = OxmlElement("w:numPr")
+    numPr.append(_el("w:ilvl", val=0))
+    numPr.append(_el("w:numId", val=num_id))
+    paragraph._p.get_or_add_pPr().insert(0, numPr)
 
 
 VERMELHO = RGBColor(0xFF, 0x00, 0x00)
@@ -163,6 +225,7 @@ def main():
     add_papel_timbrado(doc)
     pending_blank = False
     wrote = False
+    lista_atual = None   # (formato, numId) do bloco de lista em curso
 
     i = 0
     while i < len(lines):
@@ -173,6 +236,28 @@ def main():
             pending_blank = True
             i += 1
             continue
+
+        item_marcador = RE_ITEM_MARCADOR.match(s)
+        item_numerado = None if item_marcador else RE_ITEM_NUMERADO.match(s)
+        if item_marcador or item_numerado:
+            formato = "bullet" if item_marcador else "decimal"
+            texto = (item_marcador or item_numerado).group(1).strip()
+            if pending_blank and wrote:
+                doc.add_paragraph()
+            pending_blank = False
+            # linha em branco entre itens não quebra a lista; bloco novo, numeração nova
+            if lista_atual is None or lista_atual[0] != formato:
+                lista_atual = (formato, nova_lista(doc, formato))
+            p = doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+            # sem w:ind no parágrafo: os recuos vêm da definição da lista,
+            # como nas peças reais do escritório
+            aplica_lista(p, lista_atual[1])
+            add_runs(p, texto)
+            wrote = True
+            i += 1
+            continue
+        lista_atual = None
 
         if s.startswith("|"):
             if pending_blank and wrote:

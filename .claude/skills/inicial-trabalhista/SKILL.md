@@ -143,6 +143,12 @@ no chat. Procedimento:
    - **ementas/citações** de jurisprudência começando a linha com `> ` (viram
      bloco recuado em itálico);
    - rol/valores de pedidos como **tabela Markdown** (`| ... |`);
+   - **listas de itens** (dados da CTPS, CCTs aplicáveis, documentos a exibir,
+     agentes insalubres etc.) com `- item` em linhas seguidas, sem linha em
+     branco entre os itens — viram lista com **marcador** no Word, como nas
+     peças do escritório; `1. item` vira lista **numerada** (usada nos
+     requerimentos finais). As alíneas do rol de pedidos (`a)`, `b)`, ...)
+     continuam sendo texto comum, como no modelo;
    - a linha `RECLAMAÇÃO TRABALHISTA` sozinha (centralizada automaticamente);
    - **todo campo a preencher ou a conferir entre colchetes `[...]`** — o
      conversor os deixa em **VERMELHO** automaticamente (ex.: `[NOME COMPLETO]`,
