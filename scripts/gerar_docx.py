@@ -11,7 +11,9 @@ Padrão aplicado:
 - Times New Roman 12, JUSTIFICADO, entrelinha 1,5, sem espaço antes/depois
 - Recuo de 1ª linha de 1,5 cm no corpo E nos títulos de tópico (títulos em negrito)
 - Endereçamento (EXCELENTÍSSIMO/AO JUÍZO...): negrito, justificado, sem recuo
-- "RECLAMAÇÃO TRABALHISTA" (linha isolada): centralizado, negrito
+- "RECLAMAÇÃO TRABALHISTA" ou "CONTESTAÇÃO" (linha isolada): centralizado, negrito
+- Cabeçalho dos autos ("Processo nº:", "Rito:", "Reclamante:", "Reclamada:"):
+  justificado, sem recuo
 - Ementas/citações (linhas iniciadas por ">"): recuo à esquerda de 4 cm
 - Cidade/data, nome do advogado e OAB: centralizados em negrito
 - Separação entre blocos por linha em branco (preservada como parágrafo vazio)
@@ -63,7 +65,10 @@ def add_papel_timbrado(document):
         sec.footer.is_linked_to_previous = False
 
 RE_ENDERECO = re.compile(r"^\s*(EXCELENT[IÍ]SSIM|EXM|AO JU[IÍ]ZO|MERIT[IÍ]SSIM)", re.IGNORECASE)
-RE_TITULO = re.compile(r"^\s*RECLAMA(ÇÃO|CAO)\s+TRABALHISTA\s*$", re.IGNORECASE)
+RE_TITULO = re.compile(r"^\s*(RECLAMA(ÇÃO|CAO)\s+TRABALHISTA|CONTESTA(ÇÃO|CAO))\s*$", re.IGNORECASE)
+# Cabeçalho dos autos na contestação (Processo nº, Rito, Reclamante, Reclamada):
+# justificado, sem recuo de 1ª linha, sem negrito.
+RE_AUTOS = re.compile(r"^\s*(Processo|Autos|Rito|Reclamante|Reclamad[oa]|Reclamad[oa]\s*\d|R[eé]u|R[eé])\s*(n?º|nº|n\.º)?\s*:", re.IGNORECASE)
 RE_CIDADE_DATA = re.compile(r"^\s*[\wÀ-ú\.\s]{2,40}/[A-Z]{2},\s*(data do protocolo|\d{1,2}\s+de\s+\w+\s+de\s+\d{4}|data\b).*$", re.IGNORECASE)
 RE_OAB = re.compile(r"OAB", re.IGNORECASE)
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
@@ -207,6 +212,9 @@ def main():
         if RE_ENDERECO.match(s):
             p.alignment = J; pf.first_line_indent = Cm(0)
             add_runs(p, text, base_bold=True)
+        elif RE_AUTOS.match(s):
+            p.alignment = J; pf.first_line_indent = Cm(0)
+            add_runs(p, text)
         elif RE_TITULO.match(text):
             p.alignment = C; pf.first_line_indent = Cm(0)
             add_runs(p, text, base_bold=True)

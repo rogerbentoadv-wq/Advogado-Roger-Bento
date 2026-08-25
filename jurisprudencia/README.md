@@ -1,8 +1,9 @@
 # Banco de jurisprudência — protocolo e procedência
 
 Este diretório é a **única fonte autorizada** de súmulas, orientações
-jurisprudenciais (OJs), súmulas vinculantes e teses/precedentes que a skill
-`inicial-trabalhista` pode citar nas peças. A regra é simples e inegociável:
+jurisprudenciais (OJs), súmulas vinculantes e teses/precedentes que as skills
+`inicial-trabalhista` (polo ativo) e `contestacao-trabalhista` (polo passivo)
+podem citar nas peças. A regra é simples e inegociável:
 
 > **Nada é citado numa peça se não estiver aqui, com fonte e data. O que não
 > estiver verificado sai na peça marcado como `[CONFERIR]`.**
@@ -76,8 +77,11 @@ Ver `ROTINA-ATUALIZACAO.md`. Cada passada de verificação:
 - `orientacoes-jurisprudenciais-sdi.md` — OJs da SDI-1, SDI-2 e Transitórias.
 - `sumulas-trt4.md` — Súmulas e teses do TRT da 4ª Região.
 - `teses-repetitivas-irr.md` — IRR/IAC/temas repetitivos do TST e TRT-4.
-- `precedentes-do-escritorio.md` — ementas reais colhidas das peças protocoladas
-  pela banca (material de reuso; conferir vigência).
+- `precedentes-do-escritorio.md` — ementas reais colhidas das **iniciais**
+  protocoladas pela banca (material de reuso; conferir vigência).
+- `defesa-do-escritorio.md` — súmulas, OJs, teses vinculantes e normas de foro
+  citadas nas **contestações** protocoladas pela banca em favor da BS Construções
+  (fonte autorizada da skill `contestacao-trabalhista`; conferir vigência).
 - `jurisprudencia-VERIFICADO.md` — banco em formato de tabelas (súmulas, OJs,
   temas sensíveis) gerado por uma passada automática de verificação. **Ver
   cautelas abaixo antes de citar dele.**
@@ -86,8 +90,9 @@ Ver `ROTINA-ATUALIZACAO.md`. Cada passada de verificação:
 ## Relação entre os arquivos e ordem de confiança
 
 Havendo divergência entre arquivos, siga esta ordem de confiança:
-1. `sumulas-tst.md` / `precedentes-do-escritorio.md` — curados com fonte e data
-   entrada a entrada (precedentes vêm das peças reais da banca).
+1. `sumulas-tst.md` / `precedentes-do-escritorio.md` / `defesa-do-escritorio.md`
+   — curados com fonte e data entrada a entrada (precedentes e teses de defesa
+   vêm das peças reais da banca).
 2. `jurisprudencia-VERIFICADO.md` — visão em tabela, útil para os **temas
    sensíveis** (base de cálculo da insalubridade, Tema 1.046, correção/juros),
    porém contém entradas a corrigir (abaixo). Não cite dele sem conferir.

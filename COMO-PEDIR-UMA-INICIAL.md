@@ -3,6 +3,9 @@
 Guia rápido para solicitar a elaboração de uma reclamatória trabalhista com o
 agente deste projeto.
 
+> Para a **defesa** (contestação da BS Construções), veja
+> `COMO-PEDIR-UMA-CONTESTACAO.md`.
+
 ## Passo a passo
 
 **1. Abra uma conversa NOVA** no Claude Code, dentro deste projeto

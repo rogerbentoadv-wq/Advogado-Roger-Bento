@@ -1,28 +1,33 @@
 # Advogado Roger Bento — Agente de Peças Trabalhistas
 
-Projeto para elaboração assistida de **petições iniciais de reclamatória
-trabalhista** (polo ativo / reclamante), com foco no **TRT da 4ª Região (Rio
-Grande do Sul)**.
+Projeto para elaboração assistida de **peças trabalhistas** com foco no **TRT da
+4ª Região (Rio Grande do Sul)**, nos dois polos:
 
-O coração do projeto é a skill **`inicial-trabalhista`**, que faz o Claude Code
-atuar como um(a) advogado(a) trabalhista sênior (25+ anos) e conduzir todo o
-fluxo: entrevista de fatos → estratégia de teses → redação da peça → liquidação
-e valor da causa → revisão crítica.
+| Skill | Polo | O que faz |
+|---|---|---|
+| **`inicial-trabalhista`** | ativo (reclamante) | Petições iniciais de reclamatória: entrevista de fatos → estratégia de teses → redação → liquidação e valor da causa → revisão crítica |
+| **`contestacao-trabalhista`** | passivo (reclamada) | Contestações em defesa da **BS Construções e Reformas Ltda.**: dissecação da inicial → escolha da linha de defesa → preliminares, impugnação de provas e mérito → tabela pedido a pedido → revisão crítica |
+
+Ambas fazem o Claude Code atuar como advogado(a) trabalhista sênior, entregam a
+peça em **`.docx` timbrado e editável** e só citam jurisprudência do banco
+`jurisprudencia/`.
 
 ## Como usar
 
 Dentro do Claude Code, na raiz deste projeto:
 
 ```
-/inicial-trabalhista
+/inicial-trabalhista        # do lado do trabalhador
+/contestacao-trabalhista    # defesa da BS Construções
 ```
 
 ou simplesmente descreva o caso ("preciso de uma inicial para um cliente
-dispensado sem justa causa com horas extras não pagas...") que a skill é
-acionada automaticamente.
+dispensado sem justa causa com horas extras não pagas...", "chegou uma
+reclamatória contra a BS na 4ª Vara de Taquara, preciso da contestação") que a
+skill certa é acionada automaticamente.
 
-O agente vai **entrevistar você por blocos**, montar um mapa de teses para sua
-aprovação e só então redigir a peça completa.
+O agente vai **entrevistar você por blocos**, montar um mapa de teses (ou de
+defesa) para sua aprovação e só então redigir a peça completa.
 
 ## O que já está incluído
 
@@ -38,6 +43,24 @@ aprovação e só então redigir a peça completa.
 | `references/estilo-do-escritorio.md` | **A calibrar** com as peças-modelo do escritório |
 | `jurisprudencia/` | Banco de súmulas/OJs/teses com **procedência** (fonte + data + status) |
 
+### Defesa (skill `contestacao-trabalhista`)
+
+| Arquivo | Conteúdo |
+|---|---|
+| `.claude/skills/contestacao-trabalhista/SKILL.md` | Persona de defesa, linhas de defesa e fluxo de trabalho |
+| `references/cliente-bs-construcoes.md` | Dados fixos da ré, particularidades e documentos a pedir |
+| `references/checklist-analise-inicial.md` | Roteiro de coleta e dissecação da inicial |
+| `references/estrutura-da-contestacao.md` | Anatomia da peça, capítulo a capítulo |
+| `references/matriz-de-defesas.md` | Do pedido do autor à tese de defesa, em uma tabela |
+| `references/estilo-da-defesa.md` | Estilo calibrado nas contestações protocoladas |
+| `references/teses/` | Preliminares, vínculo/eventualidade, jornada, insalubridade, rescisão/multas, danos morais/acidente, impugnação de provas, honorários |
+| `modelos/MODELO-CONTESTACAO.md` (e `.docx`) | Esqueleto pronto para preencher |
+| `jurisprudencia/defesa-do-escritorio.md` | Teses de defesa já protocoladas pela banca, com procedência e alertas de conferência |
+
+As quatro contestações reais que calibraram a skill (processos de Edson
+Mauricio Nunes de Souza, Vanderlei dos Santos, Alcides Natalino Alves e Lucas
+Rodrigues Rosa) são a fonte do estilo, das teses e do banco de defesa.
+
 ## Banco de jurisprudência e a regra "nunca inventar"
 
 O diretório `jurisprudencia/` é a **única fonte autorizada** de súmulas, OJs,
@@ -45,6 +68,12 @@ súmulas vinculantes e teses que o agente pode citar. A regra é inegociável:
 
 > Nada é citado numa peça se não estiver no banco com Status `VERIFICADO`. O que
 > não estiver verificado sai marcado como `[CONFERIR]` para o advogado validar.
+
+Na defesa, três itens saem **sempre** com `[CONFERIR]`, por serem os erros mais
+fáceis e mais caros: o **número do tema repetitivo** (Tema 190 do IRR/TST), o
+**número da Portaria da Direção do Foro de Taquara** (as peças da banca divergem
+entre 01/2018 e 03/2018) e os **itens sensíveis** (OJ 394, SV 4, ADI 5766,
+ADCs 58/59).
 
 Isso é o que realmente impede a invenção de jurisprudência: o agente cita do
 banco (com fonte registrada), não de memória. Veja `jurisprudencia/README.md`.
