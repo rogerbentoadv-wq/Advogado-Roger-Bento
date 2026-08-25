@@ -40,9 +40,11 @@ Para a individualização e o recálculo determinados, a Reclamante adota, de fo
 
 **Data de admissão:** 01/02/2016, conforme CTPS Digital e extrato do FGTS anexados.
 
-**Data da dispensa:** junho de 2026, adotando-se, para fins de cálculo estimado, **[10]** dias trabalhados no mês da rescisão, premissa compatível com o agendamento do pagamento rescisório para 12/06/2026 e com o prazo do art. 477, § 6º, da CLT. [CONFERIR: dia exato da comunicação da dispensa, para ajuste do saldo de salário e da projeção do aviso-prévio.]
+**Data de saída (baixa contratual):** **12/06/2026**, data em que operada a dispensa por justa causa ora impugnada, correspondendo a **12 dias trabalhados** no mês da rescisão.
 
-**Período imprescrito (prescrição quinquenal — art. 7º, XXIX, da Constituição Federal):** de 01/08/2021 a 30/06/2026, totalizando **59 meses**, base temporal adotada para todas as parcelas de trato sucessivo. [CONFERIR: data exata do ajuizamento, para fixação precisa do marco da prescrição quinquenal e eventual ajuste do número de meses.]
+**Termo final do contrato com a projeção do aviso-prévio:** revertida a justa causa, os 60 dias de aviso-prévio indenizado projetam o término contratual para **11/08/2026**, data que passa a ser a de saída para todos os efeitos legais, inclusive anotação em CTPS, 13º salário e férias proporcionais (art. 487, § 1º, da CLT).
+
+**Período imprescrito (prescrição quinquenal — art. 7º, XXIX, da Constituição Federal):** de 01/08/2021 a 12/06/2026, totalizando 58 meses completos e 12 dias, **arredondados para 59 meses**, base temporal adotada para todas as parcelas de trato sucessivo. [CONFERIR: data exata do ajuizamento, para fixação precisa do marco da prescrição quinquenal e eventual ajuste do número de meses.]
 
 **Tempo de serviço para o aviso-prévio proporcional:** 10 (dez) anos completos de vínculo registrado, o que corresponde a 60 (sessenta) dias de aviso-prévio, na forma do parágrafo único do art. 1º da Lei nº 12.506/2011 (30 dias, acrescidos de 3 dias por ano de serviço prestado na mesma empresa).
 
@@ -60,9 +62,9 @@ Reconhecida a nulidade da justa causa e convertida a ruptura em dispensa sem jus
 
 **III.1 – Saldo de salário**
 
-Dias efetivamente trabalhados no mês da rescisão, na forma dos arts. 457 e 462 da CLT.
+Dias efetivamente trabalhados no mês da rescisão, até a data de saída de 12/06/2026, na forma dos arts. 457 e 462 da CLT.
 
-Cálculo: (R$ 2.336,60 ÷ 30) × [10] dias = **R$ 778,87**. [CÁLCULO A CONFIRMAR conforme o dia exato da dispensa.]
+Cálculo: (R$ 2.336,60 ÷ 30) × 12 dias = **R$ 934,64**.
 
 **III.2 – Aviso-prévio indenizado (60 dias)**
 
@@ -74,7 +76,9 @@ Cálculo: (R$ 2.336,60 ÷ 30) × 60 dias = **R$ 4.673,20**.
 
 Devido na proporção de 1/12 por mês trabalhado ou fração igual ou superior a 15 dias, na forma da Lei nº 4.090/62, computada a projeção do aviso-prévio indenizado (art. 487, § 1º, da CLT), o que perfaz 7/12 avos.
 
-Cálculo: (R$ 2.336,60 ÷ 12) × 7 = **R$ 1.363,02**. [CÁLCULO A CONFIRMAR: o número de avos varia conforme o dia exato da dispensa e o termo final da projeção do aviso.]
+Projetado o término contratual para 11/08/2026, contam-se os meses de janeiro a julho de 2026 — o mês de agosto, com apenas 11 dias, não completa a fração de 15 dias exigida —, o que perfaz 7/12 avos.
+
+Cálculo: (R$ 2.336,60 ÷ 12) × 7 = **R$ 1.363,02**.
 
 **III.4 – Férias vencidas, acrescidas do terço constitucional**
 
@@ -84,7 +88,7 @@ Cálculo: R$ 2.336,60 + 1/3 (R$ 778,87) = **R$ 3.115,47**. [CONFERIR: se o perí
 
 **III.5 – Férias proporcionais, acrescidas do terço constitucional**
 
-Referentes ao período aquisitivo iniciado em 01/02/2026, computada a projeção do aviso-prévio, o que perfaz 6/12 avos, na forma do art. 146, parágrafo único, da CLT.
+Referentes ao período aquisitivo iniciado em 01/02/2026 e encerrado, com a projeção do aviso-prévio, em 11/08/2026 — computando-se os meses de fevereiro a julho, pois os 11 dias de agosto não completam a fração de 15 dias —, o que perfaz 6/12 avos, na forma do art. 146, parágrafo único, da CLT.
 
 Cálculo: (R$ 2.336,60 ÷ 12) × 6 + 1/3 = R$ 1.168,30 + R$ 389,43 = **R$ 1.557,73**.
 
@@ -104,7 +108,9 @@ Cálculo: 40% × (R$ 24.311,11 + R$ 482,90) = 40% × R$ 24.794,01 = **R$ 9.917,6
 
 **III.8 – Subtotal das verbas rescisórias individualizadas**
 
-A soma das parcelas rescisórias individualizadas nos itens III.1 a III.7 perfaz **R$ 21.888,79**, valor que **substitui** a quantia única de R$ 35.000,00 anteriormente atribuída à alínea "d" do rol de pedidos da petição inicial.
+A soma das parcelas rescisórias individualizadas nos itens III.1 a III.7 perfaz **R$ 22.044,56**, valor que **substitui** a quantia única de R$ 35.000,00 anteriormente atribuída à alínea "d" do rol de pedidos da petição inicial.
+
+**Dedução dos valores já pagos:** as parcelas acima são postuladas com a dedução dos valores que a Reclamada comprovar ter efetivamente quitado no acerto realizado em 12/06/2026, restringindo-se a condenação às diferenças apuradas, a fim de que não se postule verba já satisfeita. [CONFERIR: valores efetivamente pagos no TRCT de 12/06/2026, a ser exibido pela Reclamada, para o abatimento correspondente.]
 
 IV – DO RECÁLCULO INDIVIDUALIZADO DOS DEMAIS PEDIDOS
 
@@ -120,7 +126,7 @@ Indenização substitutiva correspondente às parcelas do benefício a que a Rec
 
 **IV.3 – Retificação/baixa da CTPS, com a projeção do aviso-prévio**
 
-Obrigação de fazer, sem conteúdo econômico direto, à qual se atribui, apenas para fins do art. 840, § 1º, da CLT, o valor estimado de **R$ 1.000,00**, sem prejuízo da multa diária requerida em caso de descumprimento. [CONFERIR: valor a ser atribuído à obrigação de fazer.]
+Revertida a justa causa, a CTPS deve ser retificada para constar a baixa como **dispensa sem justa causa**, com **data de saída em 11/08/2026**, correspondente à projeção dos 60 dias de aviso-prévio indenizado sobre a data de saída de 12/06/2026 (art. 487, § 1º, da CLT). Obrigação de fazer, sem conteúdo econômico direto, à qual se atribui, apenas para fins do art. 840, § 1º, da CLT, o valor estimado de **R$ 1.000,00**, sem prejuízo da multa diária requerida em caso de descumprimento. [CONFERIR: valor a ser atribuído à obrigação de fazer.]
 
 **IV.4 – Reconhecimento da remuneração real e da natureza salarial do pagamento extrafolha**
 
@@ -135,10 +141,10 @@ Repercussões da integração da média mensal paga extrafolha, no período impr
 | 13º salários | R$ 41.300,00 ÷ 12 | R$ 3.441,67 |
 | Férias + 1/3 | R$ 41.300,00 ÷ 12 × 1,3333 | R$ 4.588,89 |
 | Aviso-prévio indenizado | R$ 700,00 × 2 meses | R$ 1.400,00 |
-| Saldo de salário | R$ 700,00 ÷ 30 × [10] dias | R$ 233,33 |
+| Saldo de salário | R$ 700,00 ÷ 30 × 12 dias | R$ 280,00 |
 | FGTS (8%) | 8% × (R$ 41.300,00 + 13º + aviso) | R$ 3.691,33 |
 | Multa de 40% | 40% × R$ 3.691,33 | R$ 1.476,53 |
-| **Subtotal** | | **R$ 14.831,75** |
+| **Subtotal** | | **R$ 14.878,42** |
 
 O reflexo da integração do extrafolha sobre as horas extras já se encontra computado no pedido próprio de horas extras, cuja base de cálculo é a **remuneração real**, não havendo dupla contagem.
 
@@ -220,7 +226,7 @@ Corresponde a uma remuneração da Reclamante, adotada a remuneração real: **R
 
 Acréscimo de 50% sobre as verbas rescisórias incontroversas não quitadas até a primeira audiência, estimado sobre o subtotal das rescisórias individualizadas.
 
-Cálculo: 50% × R$ 21.888,79 = **R$ 10.944,40**. [CÁLCULO A CONFIRMAR: o valor definitivo depende da extensão do que vier a ser reconhecido como incontroverso na defesa.]
+Cálculo: 50% × R$ 22.044,56 = **R$ 11.022,28**. [CÁLCULO A CONFIRMAR: o valor definitivo depende da extensão do que vier a ser reconhecido como incontroverso na defesa.]
 
 **IV.15 – Pedidos sem conteúdo econômico autônomo**
 
@@ -235,7 +241,7 @@ Diante do exposto, a Reclamante requer a procedência dos pedidos, condenando-se
 | a) Justiça gratuita | sem conteúdo econômico |
 | b) Segredo de justiça ou restrição de visualização | sem conteúdo econômico |
 | c) Nulidade da justa causa e conversão em dispensa sem justa causa | declaratório |
-| d) Saldo de salário | R$ 778,87 |
+| d) Saldo de salário (12 dias) | R$ 934,64 |
 | e) Aviso-prévio indenizado (60 dias) | R$ 4.673,20 |
 | f) 13º salário proporcional (7/12), com projeção do aviso | R$ 1.363,02 |
 | g) Férias vencidas + 1/3 | R$ 3.115,47 |
@@ -244,9 +250,9 @@ Diante do exposto, a Reclamante requer a procedência dos pedidos, condenando-se
 | j) Multa de 40% do FGTS | R$ 9.917,60 |
 | k) Liberação das guias do FGTS ou indenização substitutiva | R$ 24.311,11 |
 | l) Guias do seguro-desemprego ou indenização substitutiva | R$ 10.000,00 |
-| m) Retificação/baixa da CTPS com projeção do aviso | R$ 1.000,00 |
+| m) Retificação/baixa da CTPS, com saída em 11/08/2026 | R$ 1.000,00 |
 | n) Reconhecimento da remuneração real e da natureza salarial do extrafolha | declaratório |
-| o) Reflexos da integração do salário extrafolha | R$ 14.831,75 |
+| o) Reflexos da integração do salário extrafolha | R$ 14.878,42 |
 | p) Adicional por acúmulo de função (20%) + reflexos | R$ 48.497,47 |
 | q) Horas extras + reflexos | R$ 45.997,54 |
 | r) Intervalo intrajornada suprimido (art. 71, § 4º, da CLT) | R$ 29.316,99 |
@@ -256,9 +262,9 @@ Diante do exposto, a Reclamante requer a procedência dos pedidos, condenando-se
 | v) Eficácia limitada do documento rescisório | declaratório |
 | w) Indenização por dano moral | R$ 15.000,00 |
 | x) Multa do art. 477, § 8º, da CLT | R$ 3.036,60 |
-| y) Multa do art. 467 da CLT | R$ 10.944,40 |
+| y) Multa do art. 467 da CLT | R$ 11.022,28 |
 | z) Exibição de documentos, sob pena de confissão | sem conteúdo econômico |
-| **VALOR TOTAL DOS PEDIDOS** | **R$ 257.069,90** |
+| **VALOR TOTAL DOS PEDIDOS** | **R$ 257.350,22** |
 
 Requer, ainda, a condenação da Reclamada ao pagamento de honorários advocatícios sucumbenciais no percentual de 15% sobre o valor que resultar da liquidação da sentença, parcela de natureza acessória que, por essa razão, não integra o valor da causa.
 
@@ -266,11 +272,11 @@ Os valores acima são **estimativos**, formulados para atender ao art. 840, § 1
 
 VI – DO RECÁLCULO E DA RETIFICAÇÃO DO VALOR DA CAUSA
 
-Recalculado cada pedido na forma dos tópicos III e IV, o valor da causa é retificado de R$ 229.000,00 para **R$ 257.069,90**, correspondente à **soma aritmética exata** dos pedidos individualizados no quadro acima, atendendo integralmente à determinação de retificação contida no despacho ID 91ddc17.
+Recalculado cada pedido na forma dos tópicos III e IV, o valor da causa é retificado de R$ 229.000,00 para **R$ 257.350,22**, correspondente à **soma aritmética exata** dos pedidos individualizados no quadro acima, atendendo integralmente à determinação de retificação contida no despacho ID 91ddc17.
 
 A variação decorre, de um lado, do acréscimo representado pela atribuição de valor aos pedidos antes lançados como "valor a apurar" (liberação das guias do FGTS e multa do art. 467 da CLT) e pela apuração, sobre critérios expressos e sobre a remuneração real, das parcelas de trato sucessivo no período imprescrito de 59 meses — notadamente o adicional por acúmulo de função, as horas extras e o intervalo intrajornada, antes lançados por estimativa global inferior à sua expressão real.
 
-De outro lado, houve **redução** do valor de parcelas que estavam superdimensionadas ou duplicadas: as verbas rescisórias passaram de R$ 35.000,00 para R$ 21.888,79; o pedido de reconhecimento da remuneração real deixou de receber valor autônomo (R$ 28.000,00), por ser declaratório; e o pedido genérico de diferenças de FGTS deixou de receber valor autônomo (R$ 15.000,00), por já estar computado, de forma individualizada, dentro de cada pedido.
+De outro lado, houve **redução** do valor de parcelas que estavam superdimensionadas ou duplicadas: as verbas rescisórias passaram de R$ 35.000,00 para R$ 22.044,56; o pedido de reconhecimento da remuneração real deixou de receber valor autônomo (R$ 28.000,00), por ser declaratório; e o pedido genérico de diferenças de FGTS deixou de receber valor autônomo (R$ 15.000,00), por já estar computado, de forma individualizada, dentro de cada pedido.
 
 O resultado é um valor da causa **integralmente decomposto**, em que cada real corresponde a um pedido certo, determinado e liquidado, sem sobreposição entre rubricas.
 
@@ -282,7 +288,7 @@ a) o recebimento e a homologação do presente aditamento, apresentado tempestiv
 
 b) o reconhecimento de que todos os pedidos se encontram certos, determinados e com indicação de valor individualizado, afastando-se a extinção cominada no despacho;
 
-c) a **retificação do valor da causa** para R$ 257.069,90, com a devida anotação no sistema processual;
+c) a **retificação do valor da causa** para R$ 257.350,22, com a devida anotação no sistema processual;
 
 d) a **manutenção integral dos demais termos, fatos, fundamentos, pedidos e requerimentos** da petição inicial, que não foram alterados por este aditamento;
 
