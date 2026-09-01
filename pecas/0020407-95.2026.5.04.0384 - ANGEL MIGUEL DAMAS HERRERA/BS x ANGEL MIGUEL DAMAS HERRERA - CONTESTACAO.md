@@ -49,7 +49,13 @@ II – DA IMPUGNAÇÃO ESPECÍFICA ÀS PROVAS DOCUMENTAIS E DIGITAIS
 
 Na forma dos arts. 341 e 342 do CPC c/c art. 769 da CLT, a Reclamada **IMPUGNA EXPRESSAMENTE** os documentos que instruem a inicial, pelas razões individualizadas a seguir:
 
-1. **"Comprovante de PIX" (ID 59a6bef)** — **[CONFERIR TEOR DO DOCUMENTO: identificar remetente, destinatário, data e valor — e, em especial, se corresponde ao pagamento de R$ 700,00 de 19/05/2026, referente à empreitada]**. Comprovante isolado de transferência eletrônica **não prova relação de emprego** e, muito menos, salário mensal fixo de R$ 2.000,00: atesta, quando muito, a quitação pontual de serviço prestado. Se o documento corresponde ao pagamento de **R$ 700,00 realizado em 19/05/2026**, ele **confirma a tese da defesa** — pagamento avulso, por tarefa concluída, efetuado **após** a data em que o próprio Autor afirma ter cessado a prestação (15/05/2026) e em valor incompatível com a remuneração mensal alegada. Requer-se, desde já, que qualquer valor nele consignado seja **deduzido** de eventual condenação (art. 767 da CLT).
+1. **"Comprovante de PIX" (ID 59a6bef) — documento que sequer se refere à Reclamada.** Impugna-se **categoricamente** o comprovante de transferência juntado com a inicial: **a Reclamada não figura na operação**. O comprovante aponta como [remetente — CONFERIR NO DOCUMENTO] o Sr. **WILLIANS DA SILVA OLIVEIRA**, pessoa física que não se confunde com a BS CONSTRUÇÕES E REFORMAS LTDA., CNPJ nº 33.438.364/0001-07. **[CONFERIR COM O PREPOSTO, ANTES DA AUDIÊNCIA, se o Sr. Willians da Silva Oliveira possui qualquer relação com a Reclamada — sócio, empregado, preposto ou subempreiteiro. Somente após essa confirmação sustente, em audiência, tratar-se de terceiro inteiramente estranho à empresa.]**
+
+Transferência realizada entre pessoas físicas, por terceiro que não é parte nesta lide, **nada prova** contra a Reclamada: não demonstra pagamento de salário, não demonstra contratação, não demonstra subordinação e não é oponível a quem não participou da operação. Ao contrário, evidencia que o Autor recebia valores de **origem diversa da empregadora**, o que apenas confirma que a prestação posterior a 09/04/2026 não se deu sob relação de emprego com a Contestante.
+
+Cumpre distinguir, para que não se confundam: o comprovante do Autor (ID 59a6bef) **não corresponde** ao pagamento de **R$ 700,00 efetuado pela Reclamada em 19/05/2026**, a título de empreitada, este sim documentado na defesa **(doc. anexo)**. São documentos distintos, de origens distintas.
+
+Requer-se, por isso, a **desconsideração** do documento como meio de prova dos fatos constitutivos alegados, permanecendo íntegro o ônus do Autor (art. 818, I, da CLT c/c art. 373, I, do CPC).
 
 2. **Documento de identidade (ID 18f4f13)** — presta-se exclusivamente à qualificação civil do Autor, nada demonstrando quanto a admissão, função, salário, jornada ou modalidade de extinção contratual.
 
@@ -98,6 +104,8 @@ a) **o valor** — R$ 700,00 por serviço concluído é incompatível com a aleg
 b) **a data** — o pagamento ocorreu em **19/05/2026**, isto é, **depois** do dia em que o Autor afirma ter sido dispensado (15/05/2026), o que só se explica pela quitação de **tarefa concluída**, e não por contraprestação de contrato de emprego em curso;
 
 c) **a natureza isolada** — trata-se de pagamento único e avulso no período, e não de remuneração mensal sucessiva.
+
+Registre-se que esse pagamento **não se confunde** com o comprovante de PIX juntado pelo Autor (ID 59a6bef), operação de terceiro — Sr. Willians da Silva Oliveira — na qual a Reclamada não figura, conforme item II.1 desta contestação.
 
 A relação, portanto, rege-se pelo **art. 610 do Código Civil** (empreitada), e não pelos arts. 2º e 3º da CLT, dos quais faltam, no período, a **não eventualidade** e a **subordinação jurídica**. O ônus de demonstrar os requisitos do vínculo é **integralmente do Autor**, por se tratar de fato constitutivo do seu direito (art. 818, I, da CLT c/c art. 373, I, do CPC), e dele o Reclamante não se desincumbiu: não juntou recibo, ordem de serviço, controle de ponto, crachá, mensagem ou qualquer elemento que indicasse continuidade da prestação entre 10/04/2026 e 15/05/2026.
 
