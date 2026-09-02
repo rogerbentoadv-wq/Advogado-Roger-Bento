@@ -1,14 +1,17 @@
 # Projeto Advogado Róger Bento — regras permanentes
 
-Este projeto elabora **peças trabalhistas** (foco TRT-4/RS) por meio de duas
-skills:
+Este projeto elabora **peças trabalhistas** (foco TRT-4/RS) e os **painéis de
+números do escritório**, por meio de três skills:
 
 - `inicial-trabalhista` — **polo ativo**: petições iniciais de reclamatória.
 - `contestacao-trabalhista` — **polo passivo**: contestações em defesa da
   **BS Construções e Reformas Ltda.**
+- `graficos-planilha` — **gestão**: transforma planilhas em painéis `.png` com a
+  identidade do escritório, para apresentar os números à equipe.
 
-As regras abaixo são **padrão fixo do escritório** e valem para **toda peça**
-(inicial ou contestação), em qualquer sessão.
+As regras de peça abaixo são **padrão fixo do escritório** e valem para **toda
+peça** (inicial ou contestação), em qualquer sessão. As regras de painel estão
+na seção "Painéis de números", no fim.
 
 ## Entrega da peça (INEGOCIÁVEL)
 
@@ -83,3 +86,22 @@ documentos da empresa comprovam (registro, pagamento, CAT emitida): a
 contradição documental destrói a defesa e expõe à litigância de má-fé
 (arts. 793-A a 793-C da CLT). Linhas de defesa incompatíveis nunca convivem como
 tese principal na mesma peça.
+
+## Painéis de números (skill `graficos-planilha`)
+
+Painel **não é peça**: sai em **`.png`** (imagem, para o grupo da equipe e para
+projetar em reunião), não em `.docx`, e é gerado pelos scripts de
+`scripts/paineis/` sobre o módulo de estilo `scripts/estilo_graficos.py`.
+
+Valem as mesmas duas regras de fundo das peças:
+
+1. **Logo sempre.** `eg.novo_painel()` aplica o cabeçalho com a logo do
+   escritório. Painel sem logo não foi gerado pelo módulo de estilo.
+2. **`[CONFERIR]` em VERMELHO.** Período ausente, linha que não fecha com a
+   conta, meta sem realizado, coluna ambígua — tudo vai para o rodapé em
+   vermelho, via `eg.nota_conferir()`. **Nunca inventar, estimar ou projetar
+   número para tapar buraco de planilha**, do mesmo modo que não se inventa
+   jurisprudência.
+
+Antes de entregar, **abrir o `.png` e conferir visualmente** (rótulo
+encavalado, texto cortado, legenda sobre título).
